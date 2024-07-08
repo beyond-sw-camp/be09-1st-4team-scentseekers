@@ -1117,7 +1117,7 @@ VALUES ('POST', '스팸성 게시글', NOW(), 1);
 
 SELECT * FROM post WHERE report_count >= 1;
 ```
-![14번(1)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/3e7f0e38-c0af-4362-9c3e-cc2d87e3118f)
+![14(2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/9d81335d-6ebe-4d75-b7b2-33ccbc9db11c)
 </details>
 
 <details style="margin-bottom:16px;">
