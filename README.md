@@ -458,6 +458,8 @@ SELECT
 FROM members m
 JOIN members_grade g ON m.members_grade_code = g.members_grade_code;
 ```
+![10-ezgif com-crop](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/40fb9aa7-51b2-435d-868f-44c5c6be8a1b)
+
 ![10번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/8f5c15b6-f0b2-44e4-9d10-978ecff1f1a3)
 </details>
 
