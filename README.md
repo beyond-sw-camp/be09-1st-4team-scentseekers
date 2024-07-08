@@ -101,8 +101,12 @@ CREATE TABLE;
 <details style="margin-bottom:16px;">
 <summary>TEST-4: 검색어로 향수 검색</summary>
 : 브랜드명 '디올' 을 검색하여 향수 정보를 조회한다.
+  ![이름 검색 - 디올](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/c20b07d7-ce3f-410a-9aac-5f20fc069a98)
+
+
 <br/>
 : 계열 '머스크' 을 검색하여 해당 계열을 지닌 향수를 조회한다. 
+![계열 검색 - 머스크](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/0267a67a-a8c0-4e9e-9858-3505c56c123b)
     
 ```sql
 ```
