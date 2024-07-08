@@ -547,6 +547,7 @@ DELIMITER ;
 -- 회원코드로 회원정보 조회
 CALL showMembersInfo(1);
 ```
+![회원정보조회](https://github.com/swcamp9thTeam4/scentseekers/assets/60764768/7601b7cd-4ba0-4008-bf04-5b199cb5c752)
 </details>
 
 <details style="margin-bottom:16px;">
@@ -598,6 +599,7 @@ DELIMITER ;
 -- 회원코드로 응모권 교환
 CALL buyCoupon(4);
 ```
+![응모권구매](https://github.com/swcamp9thTeam4/scentseekers/assets/60764768/3cb30423-b9bb-4639-b4e5-77c0e4d19499)
 </details>
 
 <details style="margin-bottom:16px;">
@@ -655,6 +657,7 @@ WHERE qna.qna_code = 7;
 
 SELECT * FROM members WHERE members_code = 10;
 ```
+![전문가승인](https://github.com/swcamp9thTeam4/scentseekers/assets/60764768/11447739-0a04-4de7-b593-adcbf7ccfedf)
 </details>
 
 <details style="margin-bottom:16px;">
