@@ -1,6 +1,7 @@
 # BEYOND SWCAMP 9기 4조 - ScentSeekers
 
 <img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/131a0e63-a867-46b5-9db3-fb325e24f916" alt="scentseekers_icon" width="250" />	
+<br>
 
 <img src="![Slide 16_9 - 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/26959eb3-44e0-4a4d-b81f-6b9d1ba05e7f)"/>
 
