@@ -1,4 +1,4 @@
-![14번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/04f8b272-60f9-4565-83d0-e54dbdc5bd4c)# BEYOND SWCAMP 9기 4조 - ScentSeekers
+# BEYOND SWCAMP 9기 4조 - ScentSeekers
 
 <img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/131a0e63-a867-46b5-9db3-fb325e24f916" alt="scentseekers_icon" width="250" />	
 
