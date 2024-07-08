@@ -1589,7 +1589,11 @@ SELECT
   FROM members a;
 ```
 
-- 실행 결과
+* 실행 결과
+![post_trigger_test](https://github.com/swcamp9thTeam4/scentseekers/assets/171817060/df7ea98f-b0d2-410f-8233-3968a15f141d)
+![게시글등록트리거1](https://github.com/swcamp9thTeam4/scentseekers/assets/171817060/c98c66dd-f71d-4130-a584-af5d56501b6d)
+![게시글등록트리거2](https://github.com/swcamp9thTeam4/scentseekers/assets/171817060/4b579d9f-4726-4da2-84b8-9f470db9294f)
+
 
 </details>
 
@@ -1672,7 +1676,11 @@ SELECT
   FROM members a;
 ```
 
-- 실행 결과
+* 실행 결과
+![comments_trigger_test](https://github.com/swcamp9thTeam4/scentseekers/assets/171817060/9ee5b2a7-1c30-4e71-934f-45b9928c0187)
+![댓글등록트리거1](https://github.com/swcamp9thTeam4/scentseekers/assets/171817060/12b66241-9039-49a5-9115-ec25fcea8a24)
+![댓글등록트리거2](https://github.com/swcamp9thTeam4/scentseekers/assets/171817060/4b3ead61-17e4-429a-a58b-7192764eef65)
+
 
 </details>
 
@@ -1856,6 +1864,10 @@ LIMIT 1;
 
 
 * 실행 결과
+![향고수추첨](https://github.com/swcamp9thTeam4/scentseekers/assets/171817060/052b36e9-a652-4e9f-aec7-441065c9cd1c)
+![향소년추첨](https://github.com/swcamp9thTeam4/scentseekers/assets/171817060/f1f9cf1f-de55-4b1f-ad53-35e9dae8cc20)
+![향린이추첨](https://github.com/swcamp9thTeam4/scentseekers/assets/171817060/841d915f-847d-4ccb-8f07-68c08d36dee1)
+
 
 
 </details>
