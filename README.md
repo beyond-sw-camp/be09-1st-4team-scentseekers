@@ -28,10 +28,10 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
   ![유사어플 (2)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/54dc3ee1-29d3-42b6-8cce-d41e419c3bf1)
 
 
-■ Scent Seekers 핵심 키워드  <br>
+#### ■ Scent Seekers 핵심 키워드  <br>
 ![어플 소개](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/4020604b-43b3-4d0e-b4c8-797b42f2e8ca)
 
-■ 로직 설명 <br>
+#### ■ 로직 설명 <br>
 ![로직 설명](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/6d358c9f-7e38-4363-b9c7-c1ecf9744c05)
 
 
