@@ -1479,8 +1479,8 @@ BEGIN
 	
 END //
 
-
 DELIMITER ;
+
 
 /* 등급포인트내역 누적에 따른 등급 책정 trigger */
 
