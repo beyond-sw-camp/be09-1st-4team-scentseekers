@@ -219,8 +219,77 @@ DELIMITER ;
 : 리뷰를 작성하면 등급 및 응모권 포인트가 각각 10점씩 증가 된다.
     
 ```sql
+SELECT * FROM members;
 
+DELIMITER //
+CREATE OR REPLACE TRIGGER update_points_after_review_insert
+AFTER INSERT ON review
+FOR EACH ROW
+BEGIN
+    -- 포인트 적립/차감 사유 추가 (리뷰 작성 포인트)
+    DECLARE review_reason_code INT;
+    DECLARE new_grade_code INT;
+    SET review_reason_code = (SELECT reason_code FROM reason WHERE reason_name = '리뷰 작성' LIMIT 1);
+
+    IF review_reason_code IS NULL THEN
+        INSERT INTO reason (reason_name, reason_pointCriteria) VALUES ('리뷰 작성', 10);
+        SET review_reason_code = LAST_INSERT_ID();
+    END IF;
+
+    -- 회원의 등급 포인트 및 쿠폰 포인트 업데이트
+    UPDATE members
+    SET members_gradePoint = members_gradePoint + 10,
+        members_couponPoint = COALESCE(members_couponPoint, 0) + 10
+    WHERE members_code = NEW.members_code;
+
+    -- 회원의 새로운 등급 계산
+    SET new_grade_code = (SELECT members_grade_code
+                          FROM members_grade
+                          WHERE members_grade_pointCriteria <= (SELECT members_gradePoint FROM members WHERE members_code = NEW.members_code)
+                          ORDER BY members_grade_pointCriteria DESC
+                          LIMIT 1);
+
+    -- 회원의 등급 업데이트
+    UPDATE members
+    SET members_grade_code = new_grade_code
+    WHERE members_code = NEW.members_code;
+
+    -- 회원의 등급 포인트 내역 기록
+    INSERT INTO grade_point (grade_point_change, grade_point_accum, grade_point_date, reason_code, members_code)
+    VALUES (10, (SELECT members_gradePoint FROM members WHERE members_code = NEW.members_code), NOW(), review_reason_code, NEW.members_code);
+
+    -- 회원의 쿠폰 포인트 내역 기록
+    INSERT INTO coupon_point (coupon_point_change, coupon_point_accum, coupon_point_date, reason_code, members_code)
+    VALUES (10, (SELECT members_couponPoint FROM members WHERE members_code = NEW.members_code), NOW(), review_reason_code, NEW.members_code);
+END //
+
+DELIMITER ;
+
+-- 테스트 리뷰 데이터 삽입
+INSERT INTO review (review_content, review_duration, review_season, review_similarity, review_likeCount, product_code, members_code)
+VALUES ('좋은 제품입니다.', '오래가요', '봄', '만족', 5, 1, 5);
+
+INSERT INTO review (review_content, review_duration, review_season, review_similarity, review_likeCount, product_code, members_code)
+VALUES ('향이 너무 좋아요', '비슷해요', '여름', '보통', 0, 2, 5);
+
+-- 리뷰 작성 후 포인트 및 등급 조회
+SELECT 
+    m.members_code,
+    m.members_email,
+    m.members_name,
+    m.members_ageRange,
+    m.members_gender,
+    m.members_gradePoint,
+    m.members_couponPoint,
+    m.members_couponPointCnt,
+    m.members_declarationCnt,
+    m.members_nickname,
+    m.members_grade_code,
+    g.members_grade_name
+FROM members m
+JOIN members_grade g ON m.members_grade_code = g.members_grade_code;
 ```
+![10번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/a77c6a6b-60ce-4e89-b833-73322673efaf)
 </details>
 
 <details style="margin-bottom:16px;">
