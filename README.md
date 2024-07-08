@@ -137,15 +137,71 @@ CREATE TABLE;
 : 제품 코드가 '11'인 향수의 상세정보를 확인한다.
     
 ```sql
+-- 11번 향수 상세정보 조회 (향수 + 사진 url)
+SELECT 
+    	  a.*
+    	, b.product_photo_url
+  FROM 
+   	product a
+  JOIN product_photo b ON a.product_code = b.product_code
+ WHERE a.product_code = 11;
+  
+-- 11번 향수의 향료 조회
+SELECT
+		  a.product_code
+		, a.product_ingredient_ingredientNote 
+		, b.ingredient_name
+   FROM product_ingredient a
+   JOIN ingredient b ON a.product_ingredient_code = b.ingredient_code
+  WHERE product_code = 11;
+
+-- 11번 향수의 계열 조회
+SELECT
+		  a.product_code
+		, b.category_type
+	FROM product_category a
+	JOIN category b ON b.category_code = a.category_code
+  WHERE product_code = 11;
 ```
+![test8](https://github.com/swcamp9thTeam4/scentseekers/assets/57509627/389efba0-ee45-48fb-8e97-a4af7b242634)
+
 </details>
 
 <details style="margin-bottom:16px;">
 <summary>TEST-9: 향수 '좋아요' 하기</summary>
-: 향수에 좋아요를 누르면 향수의 좋아요 수를 1 증가시킨다.
+: 1. 향수에 좋아요를 누르면 향수의 좋아요 수를 1 증가시킨다
+<br/>
+: 2. 좋아요를 취소한 경우 향수의 좋아요 수를 1 감소시킨다
     
 ```sql
+-- 1. 좋아요 등록
+DELIMITER //
+CREATE OR REPLACE TRIGGER trg_product_like_after
+AFTER INSERT
+ON product_like
+FOR EACH ROW
+BEGIN
+  UPDATE product
+  SET product_likeCnt  = product_likeCnt + 1
+  WHERE product_code  = NEW.product_code ;
+END //
+DELIMITER ;
+
+-- 2. 좋아요 취소
+DELIMITER //
+CREATE OR REPLACE TRIGGER trg_product_like_after_delete
+AFTER DELETE
+ON product_like
+FOR EACH ROW
+BEGIN
+  UPDATE product
+  SET product_likeCnt = product_likeCnt - 1
+  WHERE product_code = OLD.product_code;
+END //
+DELIMITER ;
 ```
+![test9](https://github.com/swcamp9thTeam4/scentseekers/assets/57509627/8b31c792-0922-4652-b567-04913b5fd556)
+
 </details>
 
 <details style="margin-bottom:16px;">
@@ -153,6 +209,7 @@ CREATE TABLE;
 : 리뷰를 작성하면 등급 및 응모권 포인트가 각각 10점씩 증가 된다.
     
 ```sql
+
 ```
 </details>
 
