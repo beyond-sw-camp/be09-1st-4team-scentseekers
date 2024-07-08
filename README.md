@@ -343,7 +343,59 @@ JOIN members_grade g ON m.members_grade_code = g.members_grade_code;
 : 전체 향수 리뷰에서 가장 높은 키워드를 표시한다. (지속력, 향이 비슷한지, 어울리는 계절)
     
 ```sql
+-- 11번 (1) 전체 향수 리뷰에서높은 키워드 (지속력, 향, 어울리는 계절) + 향수 이름까지 가져오기
+SELECT 
+    (SELECT review_duration
+     FROM review
+     GROUP BY review_duration
+     ORDER BY COUNT(*) DESC
+     LIMIT 1) AS top_duration,
+    (SELECT review_similarity
+     FROM review
+     GROUP BY review_similarity
+     ORDER BY COUNT(*) DESC
+     LIMIT 1) AS top_similarity,
+    (SELECT review_season
+     FROM review
+     GROUP BY review_season
+     ORDER BY COUNT(*) DESC
+     LIMIT 1) AS top_season,
+    p.product_name
+FROM review r
+JOIN product p ON r.product_code = p.product_code
+LIMIT 1;
 ```
+![11번(1)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/463743c7-7243-46e3-9a5d-44ff534c6393)
+
+```sql
+-- 11번(2) 향수 종류의 리뷰에서 높은 키워드(지속력, 향, 어울리는 계절) 및 향수 이름 가져오기
+SELECT
+    r.product_code,
+    p.product_name,
+    (SELECT review_duration
+     FROM review r1
+     WHERE r1.product_code = r.product_code
+     GROUP BY review_duration
+     ORDER BY COUNT(*) DESC
+     LIMIT 1) AS top_duration,
+    (SELECT review_similarity
+     FROM review r2
+     WHERE r2.product_code = r.product_code
+     GROUP BY review_similarity
+     ORDER BY COUNT(*) DESC
+     LIMIT 1) AS top_similarity,
+    (SELECT review_season
+     FROM review r3
+     WHERE r3.product_code = r.product_code
+     GROUP BY review_season
+     ORDER BY COUNT(*) DESC
+     LIMIT 1) AS top_season
+FROM review r
+JOIN product p ON r.product_code = p.product_code
+GROUP BY r.product_code, p.product_name;
+```
+![11번(2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/22c6de82-50fd-4f25-8735-631e7b3a1401)
+
 </details>
 
 <details style="margin-bottom:16px;">
@@ -367,7 +419,32 @@ JOIN members_grade g ON m.members_grade_code = g.members_grade_code;
 : 게시글을 신고하면 해당 게시글 신고 count 증가한다.
     
 ```sql
+-- 14(1) 게시글 신고하기
+SELECT * FROM post;
+
+DELIMITER //
+
+CREATE or replace TRIGGER increase_report_count_after_insert
+AFTER INSERT ON report
+FOR EACH ROW
+BEGIN
+    -- 모든 신고에 대해 post 테이블의 report_count를 증가
+    UPDATE post
+    SET report_count = report_count + 1
+    WHERE post_code = NEW.report_postCode;
+END //
+
+DELIMITER ;
 ```
+```sql
+-- 14(2) count 확인하기
+INSERT INTO report (report_category, report_reason, report_date, report_postCode)
+VALUES ('POST', '스팸성 게시글', NOW(), 1);
+
+SELECT * FROM post WHERE report_count >= 1;
+```
+![14번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/42909ba7-d2cb-4223-a106-47ef6dd03060)
+
 </details>
 
 <details style="margin-bottom:16px;">
@@ -375,7 +452,88 @@ JOIN members_grade g ON m.members_grade_code = g.members_grade_code;
 : 글의 신고 횟수가 3번 이상인 경우 게시글을 삭제하고 해당 글을 작성한 회원의 포인트를 50점 차감한다.
     
 ```sql
+-- 15 신고 내역 처리
+SELECT * FROM post;
+SELECT * FROM members;
+
+DELIMITER //
+
+CREATE or replace PROCEDURE handle_report()
+BEGIN
+    DECLARE done INT DEFAULT 0;
+    DECLARE postId INT;
+    DECLARE memberId INT;
+    DECLARE reportCursor CURSOR FOR 
+        SELECT post_code, members_code 
+        FROM post 
+        WHERE report_count >= 3;
+    
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+
+    OPEN reportCursor;
+    
+    read_loop: LOOP
+        FETCH reportCursor INTO postId, memberId;
+        IF done THEN
+            LEAVE read_loop;
+        END IF;
+
+        -- 댓글 삭제
+        DELETE FROM comments WHERE post_code = postId;
+        
+        -- 게시글 사진 삭제
+        DELETE FROM post_photo WHERE post_code = postId;
+
+        -- 게시글 해시태그 삭제
+        DELETE FROM post_hashtag WHERE post_code = postId;
+
+        -- 북마크 삭제
+        DELETE FROM bookmark WHERE post_code = postId;
+
+        -- 게시글 좋아요 삭제
+        DELETE FROM post_like WHERE post_code = postId;
+
+        -- 게시글 삭제
+        DELETE FROM post WHERE post_code = postId;
+
+        -- 해당 회원의 응모 포인트 50점 차감 (마이너스 가능)
+        UPDATE members
+        SET members_couponPoint = members_couponPoint - 50
+        WHERE members_code = memberId;
+
+        -- 응모 포인트 내역에 기록 추가
+        INSERT INTO coupon_point (coupon_point_change, coupon_point_accum, coupon_point_date, reason_code, members_code)
+        VALUES (-50, (SELECT members_couponPoint FROM members WHERE members_code = memberId), NOW(), 5, memberId);
+    END LOOP;
+
+    CLOSE reportCursor;
+END //
+
+DELIMITER ;
+
+DROP EVENT IF EXISTS handle_report_event;
+CREATE EVENT IF NOT EXISTS handle_report_event
+ON SCHEDULE EVERY 1 SECOND
+DO
+  CALL handle_report();
 ```
+```sql
+-- 신고 넣기
+INSERT INTO report (report_category, report_reason, report_date, report_postCode)
+VALUES ('POST', '스팸성 게시글', NOW(), 1);
+
+INSERT INTO report (report_category, report_reason, report_date, report_postCode)
+VALUES ('POST', '목적에 부합하지 않음', NOW(), 8);
+
+INSERT INTO report (report_category, report_reason, report_date, report_postCode)
+VALUES ('POST', '스팸성 게시글', NOW(), 8);
+
+SELECT * FROM post WHERE report_count >= 1;
+
+SELECT * FROM post;
+SELECT * FROM members;
+```
+![15번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/dc0f7c17-7c83-4fff-bfff-a7ee140f38d4)
 </details>
 
 <details style="margin-bottom:16px;">
