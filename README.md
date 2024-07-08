@@ -1,4 +1,4 @@
-# BEYOND SWCAMP 9기 4조 - ScentSeekers
+![논리모델링 최종 2 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/0f8d37af-7671-470f-95f5-01c369a35919)# BEYOND SWCAMP 9기 4조 - ScentSeekers
 
 
 ![Slide 16_9 - 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/830ef1d2-9969-4f06-afb6-0315c7eb32aa)
@@ -44,7 +44,11 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 ### 데이터베이스 모델링
 
 - 개념 모델링: <<피그마 캡쳐>>
+  ![개념모델링](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/7d9929b0-d5ef-4173-ae68-07467edb2cdb)
+
 - 논리 모델링: <<바커 표기법 da# 캡쳐>>
+  ![논리모델링 최종 2 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/055bbeb1-0dbe-4f29-92e1-1c841b872a18)
+
 - 물리 모델링: {erd cloud 캡쳐}
 
 ### 구현 및 테스트
