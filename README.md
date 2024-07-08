@@ -103,6 +103,14 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 
 <img width="1513" alt="스크린샷 2024-07-08 오후 12 10 12" src="https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/699d2b29-2c70-4396-8e4f-452b1717074d">
 
+<br>
+<img width="1464" alt="스크린샷 2024-07-08 오후 4 03 07" src="https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/01fbf9ef-551b-4761-bb86-6e6d2b29c496">
+<img width="639" alt="스크린샷 2024-07-08 오후 4 03 34" src="https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/e97e644c-7d36-43e1-bcd6-e824233240df">
+<img width="1336" alt="스크린샷 2024-07-08 오후 4 03 53" src="https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/c1110ffb-9a88-4980-8cdd-279e4bcccd5e">
+
+
+
+
 <br/>
 <br/>
 
