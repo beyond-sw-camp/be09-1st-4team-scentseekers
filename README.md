@@ -1,8 +1,8 @@
 # BEYOND SWCAMP 9기 4조 - ScentSeekers
 
 <img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/131a0e63-a867-46b5-9db3-fb325e24f916" alt="scentseekers_icon" width="250" />	
-![Slide 16_9 - 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/50bb8326-3d59-4348-be78-ca525d959894)
 
+![Slide 16_9 - 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/830ef1d2-9969-4f06-afb6-0315c7eb32aa)
 
 
 ### 팀원
