@@ -289,7 +289,7 @@ SELECT
 FROM members m
 JOIN members_grade g ON m.members_grade_code = g.members_grade_code;
 ```
-![10번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/a77c6a6b-60ce-4e89-b833-73322673efaf)
+![10번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/8f5c15b6-f0b2-44e4-9d10-978ecff1f1a3)
 </details>
 
 <details style="margin-bottom:16px;">
