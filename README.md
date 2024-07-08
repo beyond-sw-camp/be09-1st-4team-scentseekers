@@ -22,7 +22,7 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 여러 키워드와 해시태그를 통해 향수에 대한 다양한 정보를 제공받고, 커뮤니티를 통해 향수를 추천받거나 관련 정보를 공유할 수 있습니다.
 ```
 
-### 주요 기능
+### 사전 조사 및 컨셉  ... ? 
 #### ■ 유사 어플 조사 <br>
   ![유사어플 (1)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/64375d9e-f98c-44c1-b221-226d614a7249)
   ![유사어플 (2)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/54dc3ee1-29d3-42b6-8cce-d41e419c3bf1)
