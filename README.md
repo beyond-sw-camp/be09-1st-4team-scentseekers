@@ -24,12 +24,16 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 
 ### 주요 기능
 
+- 유사 어플 조사
+  ![유사어플 (1)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/64375d9e-f98c-44c1-b221-226d614a7249)
+  ![유사어플 (2)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/54dc3ee1-29d3-42b6-8cce-d41e419c3bf1)
+
 -
 -
--
--
--
--
+- Scent Seekers 핵심 키워드 
+![어플 소개](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/4020604b-43b3-4d0e-b4c8-797b42f2e8ca)
+
+- 로직 설명
 ![로직 설명](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/6d358c9f-7e38-4363-b9c7-c1ecf9744c05)
 
 ## 2. 프로젝트 설계 및 구현
