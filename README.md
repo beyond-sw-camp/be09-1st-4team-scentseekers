@@ -102,6 +102,42 @@ CREATE TABLE;
 : 회원 가입시 입력한 자신의 정보를 마이페이지에서 조회
     
 ```sql
+DELIMITER //
+
+CREATE OR REPLACE PROCEDURE showMembersInfo (
+    IN membersCode INT
+)
+BEGIN
+    SELECT 
+        a.members_code AS '회원번호',
+        a.members_email AS '이메일',
+        a.members_name AS '이름',
+        a.members_ageRange AS '연령대',
+        a.members_gender AS '성별',
+        a.members_phoneNumber AS '전화번호',
+        a.members_date AS '가입날짜',
+        a.members_expCert AS '전문가자격',
+        a.members_infoDis AS '정보공개여부',
+        a.members_withdrawalDate AS '회원탈퇴날짜',
+        a.members_gradePoint AS '등급포인트',
+        a.members_couponPoint AS '응모권포인트',
+        a.members_status AS '회원상태',
+        a.members_couponPointCnt AS '응모권개수',
+        b.members_grade_name AS '등급명',
+        a.members_declarationCnt AS '신고당한횟수',
+        a.members_nickname AS '닉네임'
+    FROM 
+        members a
+    JOIN 
+        members_grade b ON b.members_grade_code = a.members_grade_code
+    WHERE 
+        a.members_code = membersCode;
+END //
+
+DELIMITER ;
+
+-- 회원코드로 회원정보 조회
+CALL showMembersInfo(1);
 ```
 </details>
 
@@ -110,6 +146,49 @@ CREATE TABLE;
 : 자신의 응모권 포인트를 응모권으로 교환하면 응모권 개수가 증가하고 응모권 포인트가 차감됨
     
 ```sql
+DELIMITER //
+
+CREATE OR REPLACE TRIGGER buy_coupon
+AFTER INSERT ON coupon_point
+FOR EACH ROW
+BEGIN
+    IF NEW.reason_code = 6 THEN
+        UPDATE members
+        SET members_couponPoint = NEW.coupon_point_accum,
+            members_couponPointCnt = members_couponPointCnt + 1
+        WHERE members_code = NEW.members_code;
+    END IF;
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE OR REPLACE PROCEDURE buyCoupon (
+    IN membersCode INT
+)
+BEGIN
+    DECLARE memc INT;
+    DECLARE rsnp INT;
+
+    SELECT members_couponPoint INTO memc
+    FROM members
+    WHERE members_code = membersCode;
+
+    SELECT reason_pointCriteria INTO rsnp
+    FROM reason
+    WHERE reason_code = 6;
+
+    IF memc >= 30 THEN
+        INSERT INTO coupon_point
+		  VALUES (null, rsnp, memc + rsnp, DATE_FORMAT(NOW(), '%Y-%m-%d'), 6, membersCode);
+    END IF;
+END //
+
+DELIMITER ;
+
+-- 회원코드로 응모권 교환
+CALL buyCoupon(4);
 ```
 </details>
 
@@ -118,6 +197,55 @@ CREATE TABLE;
 : '전문가 인증' 카테고리에서 자격 증명 가능한 파일(자격증, 향수관련업체직원)을 첨부하여 1:1문의 신청 시 관리자가 확인 후 승인하면 전문가 등급 획득
     
 ```sql
+DELIMITER //
+
+CREATE OR REPLACE TRIGGER qna_expert
+AFTER UPDATE ON qna
+FOR EACH ROW
+BEGIN
+    IF NEW.qna_category = '전문가 인증' AND NEW.qna_code IN (SELECT qna_code FROM qna_photo) THEN
+        IF NEW.qna_responseContent IS NOT NULL THEN
+            UPDATE members
+            SET members_expCert = CASE
+                WHEN NEW.qna_responseContent LIKE '%조향사%' THEN '조향사'
+                WHEN NEW.qna_responseContent LIKE '%향수업체직원%' THEN '향수업체직원'
+            END
+            WHERE members_code = NEW.members_code;
+        END IF;
+    END IF;
+END //
+
+DELIMITER ;
+
+-- 전문가 승인 요청글 작성 -> 관리자 승인 -> 전문가 승인 완료
+VALUES 
+(
+NULL,
+'전문가 인증',
+'조향사 전문가 인증 요청합니다.',
+'조향사 자격증 첨부합니다^^',
+DATE_FORMAT(NOW(), '%Y-%m-%d'),
+NULL,
+NULL,
+NULL,
+1);
+
+SELECT * FROM qna;
+
+INSERT INTO qna_photo 
+VALUES 
+(
+NULL,
+'https://cdn.imweb.me/thumbnail/20230202/5c6b68f3aa6fb.jpg',
+7);
+
+SELECT * FROM qna;
+
+UPDATE qna
+SET qna_responseContent = '조향사 자격 승인 완료', qna_responseDate = DATE_FORMAT(NOW(), '%Y-%m-%d'), admin_code = 2
+WHERE qna.qna_code = 7;
+
+SELECT * FROM members WHERE members_code = 10;
 ```
 </details>
 
