@@ -35,17 +35,27 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 
 ### WBS
 
-- 모델링은 기획 끝나고 했다고 표시하기 (모델링 먼저 했다 하더라도)
+<img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/9f0fd1d7-b411-47de-91d1-106e36e8baa8" alt="wbs" />
+
+<br/>
+<br/>
+<br/>
 
 ### 요구사항 명세서
 
-<img src="https://github.com/swcamp9thTeam4/scentseekers/blob/main/%E1%84%8B%E1%85%AD%E1%84%80%E1%85%AE%E1%84%89%E1%85%A1%E1%84%92%E1%85%A1%E1%86%BC_%E1%84%86%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A6%E1%84%89%E1%85%A5.png?raw=true" alt="scentseekers_요구사항_명세서" />	
+<img src="https://github.com/swcamp9thTeam4/scentseekers/blob/main/%E1%84%8B%E1%85%AD%E1%84%80%E1%85%AE%E1%84%89%E1%85%A1%E1%84%92%E1%85%A1%E1%86%BC_%E1%84%86%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A6%E1%84%89%E1%85%A5.png?raw=true" alt="scentseekers_요구사항_명세서" />
+
+<br/>
+<br/>
 
 ### 데이터베이스 모델링
 
 - 개념 모델링: <<피그마 캡쳐>>
 - 논리 모델링: <<바커 표기법 da# 캡쳐>>
 - 물리 모델링: {erd cloud 캡쳐}
+
+<br/>
+<br/>
 
 ### 구현 및 테스트
 
@@ -75,11 +85,11 @@ CREATE TABLE;
 ```
 </details>
 
+<br/>
+
 ### 테스트 케이스
 
-((테스트 케이스 목록 캡쳐))
-
-
+<img width="1609" alt="테스트케이스" src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/cc606339-4a42-4aae-9f28-1007c234f473">
 
 <details style="margin-bottom:16px;">
 <summary>TEST-1: 회원정보조회</summary>
