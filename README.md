@@ -2,6 +2,9 @@
 
 <img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/131a0e63-a867-46b5-9db3-fb325e24f916" alt="scentseekers_icon" width="250" />	
 
+[Slide 16_9 - 2.pdf](https://github.com/user-attachments/files/16122077/Slide.16_9.-.2.pdf)
+
+
 
 ### 팀원
 
@@ -160,7 +163,8 @@ WHERE
     OR p.product_name LIKE '%머스크%'
     OR pi_tbl.ingredient_name LIKE '%머스크%';
 ```
-![계열 검색 - 머스크](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/91278bea-4235-4e85-ba8f-b82dfefd4bb9)
+![계열검색-머스크2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/4704e8a8-0082-4b52-bb91-ed70c85947d4)
+
 
 </details>
 
@@ -169,7 +173,86 @@ WHERE
 : '시향' 검색을 통해 시향 해시태그를 포함하는 리뷰와 게시글을 통합 조회한다.
     
 ```sql
+-- 해시태그 '시향'으로 리뷰와 게시글을 통합 검색하는 쿼리
+(
+    -- 게시글 쿼리
+    SELECT 
+        'Post' AS type, 
+        post_tbl.hashtag_name,
+        m.members_nickname,
+        mgg.members_grade_name,
+        m.members_expCert,
+        m.members_gender,
+        m.members_ageRange,
+        p.post_title AS content_title,
+        NULL AS review_content, 
+        NULL AS review_duration, 
+        NULL AS review_season,   
+        NULL AS review_similarity,
+        NULL AS review_likeCount,
+        p.post_category,
+        p.post_date,
+        p.post_like
+    FROM 
+        post p
+    INNER JOIN 
+        members m ON m.members_code = p.members_code
+    INNER JOIN 
+        members_grade mgg ON m.members_grade_code = mgg.members_grade_code
+    INNER JOIN 
+        (SELECT 
+            ph.post_code,
+            h.hashtag_name
+         FROM 
+            hashtag h
+         INNER JOIN 
+            post_hashtag ph ON ph.hashtag_code = h.hashtag_code
+         WHERE 
+            h.hashtag_name = '시향'
+        ) AS post_tbl ON post_tbl.post_code = p.post_code
+)
+UNION ALL
+(
+    -- 리뷰 쿼리
+    SELECT 
+        'Review' AS type, 
+        review_tbl.hashtag_name,
+        m.members_nickname,
+        mgg.members_grade_name,
+        m.members_expCert,
+        m.members_gender,
+        m.members_ageRange,
+        NULL AS content_title, 
+        r.review_content,
+        r.review_duration,
+        r.review_season,
+        r.review_similarity,
+        r.review_likeCount,
+        NULL AS post_category, 
+        NULL AS post_date,     
+        NULL AS post_like     
+    FROM 
+        review r
+    INNER JOIN 
+        members m ON m.members_code = r.members_code
+    INNER JOIN 
+        members_grade mgg ON m.members_grade_code = mgg.members_grade_code
+    INNER JOIN 
+        (SELECT 
+            rh.review_code,
+            h.hashtag_name
+         FROM 
+            hashtag h
+         INNER JOIN 
+            review_hashtag rh ON rh.hashtag_code = h.hashtag_code
+         WHERE 
+            h.hashtag_name = '시향'
+        ) AS review_tbl ON review_tbl.review_code = r.review_code
+);
+
 ```
+![해시태그로 리뷰_게시글 통합검색](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/1bd9d420-5059-4c4a-8412-1c9338a8473e)
+
 </details>
 
 <details style="margin-bottom:16px;">
