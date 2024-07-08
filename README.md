@@ -7,11 +7,11 @@
 ### 팀원
 
 ■ **장호정** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/hoddeok07) <br>
-■ **양현진** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/yanghyeonjin)
-■ **박경희** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/iwillbfine)
-■ **노다민** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/RohDamin)
-■ **김시우** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/siu98)
-■ **윤채연** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/yncayn)
+■ **양현진** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/yanghyeonjin) <br>
+■ **박경희** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/iwillbfine) <br>
+■ **노다민** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/RohDamin) <br>
+■ **김시우** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/siu98) <br>
+■ **윤채연** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/yncayn) <br>
 
 ## 1. 프로젝트 소개
 
@@ -24,15 +24,15 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 
 ### 주요 기능
 
-■ 유사 어플 조사
+■ 유사 어플 조사 <br>
   ![유사어플 (1)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/64375d9e-f98c-44c1-b221-226d614a7249)
   ![유사어플 (2)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/54dc3ee1-29d3-42b6-8cce-d41e419c3bf1)
 
 
-■ Scent Seekers 핵심 키워드 
+■ Scent Seekers 핵심 키워드  <br>
 ![어플 소개](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/4020604b-43b3-4d0e-b4c8-797b42f2e8ca)
 
-■ 로직 설명
+■ 로직 설명 <br>
 ![로직 설명](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/6d358c9f-7e38-4363-b9c7-c1ecf9744c05)
 
 ## 2. 프로젝트 설계 및 구현
