@@ -256,18 +256,60 @@ UNION ALL
 
 <details style="margin-bottom:16px;">
 <summary>TEST-6: 다양한 항목을 조합한 추천</summary>
-: 향료에 '자스민' 또는 '라벤더' 또는 '샌달우드' 가 들어가는 향수를 조회한다. (유저가 체크박스 등으로 여러 향료를 선택했다고 가정)
+
+<br/>
+
+* 향료에 '일랑일랑', '라벤더', '샌달우드', '베르가못' 중 하나라도 포함되는 향수 찾기 (유저가 체크박스 등으로 여러 향료를 선택했다고 가정)
     
 ```sql
+SELECT
+       DISTINCT
+       c.product_code
+     , c.product_name 
+     , c.product_price 
+     , c.product_texture 
+     , c.product_season
+     , c.product_gender 
+     , c.product_duration 
+     , c.product_brand 
+     , c.product_weight
+  FROM ingredient a
+  JOIN product_ingredient b ON a.ingredient_code = b.ingredient_code 
+  JOIN product c ON b.product_code = c.product_code
+ WHERE a.ingredient_name IN ('일랑일랑','라벤더','샌달우드','베르가못');
 ```
+
+<br/>
+
+* 실행 결과
+
+<img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/a96f3b34-0443-422f-b4e6-c54276e98105" alt="TEST_6_실행결과" />
+
 </details>
 
 <details style="margin-bottom:16px;">
 <summary>TEST-7: 좋아요 TOP5 브랜드 조회</summary>
-: 좋아요가 많은 순으로 향수 브랜드 5개를 조회한다.
+
+<br/>
+
+* 좋아요가 많은 순으로 향수 브랜드 5개를 조회한다.
     
 ```sql
+SELECT 
+       a.product_brand 
+     , sum(a.product_likeCnt)
+  FROM product a
+ GROUP BY a.product_brand
+ ORDER BY 2 DESC
+ LIMIT 5;
 ```
+
+<br/>
+
+* 실행 결과
+
+<img width="375" alt="TEST-7-실행결과" src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/d237c39e-4442-46ae-80ba-6c131ef89bc7">
+
 </details>
 
 <details style="margin-bottom:16px;">
