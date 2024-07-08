@@ -618,7 +618,6 @@ SELECT * FROM post WHERE report_count >= 1;
 SELECT * FROM post;
 SELECT * FROM members;
 ```
-<img src="https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/dc0f7c17-7c83-4fff-bfff-a7ee140f38d4.gif" width="1000" height="200"/>
 ![15번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/dc0f7c17-7c83-4fff-bfff-a7ee140f38d4)
 </details>
 
