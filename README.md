@@ -656,10 +656,7 @@ SELECT * FROM post WHERE report_count >= 1;
 SELECT * FROM post;
 SELECT * FROM members;
 ```
-![15-ezgif com-video-to-gif-converter (2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/25593275-e88c-45b3-bab3-85b2a2c48008)
-![15-ezgif com-resize](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/a611524f-3882-4ffd-a974-cc1128c03e5f)
-
-
+![15번(1)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/71ba57cb-f608-47a8-b023-99f4162d4ebf)
 </details>
 
 <details style="margin-bottom:16px;">
