@@ -419,6 +419,8 @@ SELECT
 FROM members m
 JOIN members_grade g ON m.members_grade_code = g.members_grade_code;
 ```
+![1](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/04819c62-6f0d-495e-ba6f-fe8868ecb326)
+
 ![10번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/8f5c15b6-f0b2-44e4-9d10-978ecff1f1a3)
 </details>
 
