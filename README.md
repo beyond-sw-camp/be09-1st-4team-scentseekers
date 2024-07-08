@@ -1,21 +1,24 @@
 # BEYOND SWCAMP 9기 4조 - ScentSeekers
 
-- 피그마 피피티 첫 페이지 캡쳐
+<img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/131a0e63-a867-46b5-9db3-fb325e24f916" alt="scentseekers_icon" width="250" />
 
 ### 팀원
 
-- **장호정**
+- **장호정** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/hoddeok07)
 - **양현진** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/yanghyeonjin)
-- **박경희**
-- **노다민**
-- **김시우**
-- **윤채연**
+- **박경희** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/iwillbfine)
+- **노다민** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/RohDamin)
+- **김시우** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/siu98)
+- **윤채연** [<img src="https://img.shields.io/badge/Github-Link-181717?logo=Github">](https://github.com/yncayn)
 
-## 프로젝트 소개
+## 1. 프로젝트 소개
 
 ### 주제
 
-### 기획 배경
+```
+SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입니다.
+여러 키워드와 해시태그를 통해 향수에 대한 다양한 정보를 제공하고, 커뮤니티를 통해 향수를 추천받거나 관련 정보를 공유할 수 있습니다.
+```
 
 ### 주요 기능
 
@@ -26,21 +29,23 @@
 -
 -
 
-## WBS
+## 2. 프로젝트 설계 및 구현
+
+### WBS
 
 - 모델링은 기획 끝나고 했다고 표시하기 (모델링 먼저 했다 하더라도)
 
-## 요구사항 명세서
+### 요구사항 명세서
 
 - 담당자랑 중요도 까지 캡쳐한 이미지
 
-## 데이터베이스 모델링
+### 데이터베이스 모델링
 
 - 개념 모델링: <<피그마 캡쳐>>
 - 논리 모델링: <<바커 표기법 da# 캡쳐>>
 - 물리 모델링: {erd cloud 캡쳐}
 
-## 구현 및 테스트
+### 구현 및 테스트
 
 - 기술 스택: MariaDB (버전명)
 - master/slave Replication 구조
@@ -68,7 +73,7 @@ CREATE TABLE;
 ```
 </details>
 
-### 테스트
+### 테스트 케이스
 
 ((테스트 케이스 목록 캡쳐))
 
@@ -269,7 +274,7 @@ DELIMITER ;
 ```
 </details>
 
-## 동료 평가
+## 3. 동료 평가
 
 ```
 장호정: 
