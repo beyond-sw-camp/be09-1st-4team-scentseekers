@@ -474,9 +474,7 @@ SELECT
 FROM members m
 JOIN members_grade g ON m.members_grade_code = g.members_grade_code;
 ```
-![10-ezgif com-crop](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/40fb9aa7-51b2-435d-868f-44c5c6be8a1b)
-
-![10번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/8f5c15b6-f0b2-44e4-9d10-978ecff1f1a3)
+![10번(1)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/435f22ac-50dd-4329-91e8-a438bf97f2d8)
 </details>
 
 <details style="margin-bottom:16px;">
@@ -535,8 +533,7 @@ FROM review r
 JOIN product p ON r.product_code = p.product_code
 GROUP BY r.product_code, p.product_name;
 ```
-![11번(2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/22c6de82-50fd-4f25-8735-631e7b3a1401)
-
+![11번-2(2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/43e21894-cc02-4dba-ba8a-1bc4d5dad48c)
 </details>
 
 <details style="margin-bottom:16px;">
@@ -584,8 +581,7 @@ VALUES ('POST', '스팸성 게시글', NOW(), 1);
 
 SELECT * FROM post WHERE report_count >= 1;
 ```
-![14번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/42909ba7-d2cb-4223-a106-47ef6dd03060)
-
+![14번(1)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/3e7f0e38-c0af-4362-9c3e-cc2d87e3118f)
 </details>
 
 <details style="margin-bottom:16px;">
