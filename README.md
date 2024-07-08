@@ -657,8 +657,9 @@ SELECT * FROM post;
 SELECT * FROM members;
 ```
 ![15-ezgif com-video-to-gif-converter (2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/25593275-e88c-45b3-bab3-85b2a2c48008)
+![15-ezgif com-resize](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/a611524f-3882-4ffd-a974-cc1128c03e5f)
 
-![15번](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/dc0f7c17-7c83-4fff-bfff-a7ee140f38d4)
+
 </details>
 
 <details style="margin-bottom:16px;">
