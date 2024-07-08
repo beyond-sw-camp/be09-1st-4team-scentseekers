@@ -1517,6 +1517,21 @@ BEGIN
 END //
 
 DELIMITER ;
+
+
+-- 게시글 등록 trigger test
+
+INSERT INTO post VALUES
+(NULL, '향수 추천해요!', '향수 5개 추천해드릴게요!', NOW(), '추천', '10', '0', 'N', 5),
+(NULL, '이 향수 어떤가요?', '남자후배에게 선물하려는데 괜찮을까요?', NOW(), '질문', '3', '0', 'N', 5);
+
+SELECT
+       *
+  FROM grade_point b;
+
+SELECT
+       a.members_code, a.members_name, a.members_gradePoint, a.members_couponPoint, a.members_status, a.members_grade_code
+  FROM members a;
 ```
 </details>
 
@@ -1583,6 +1598,19 @@ BEGIN
 END //
 
 DELIMITER ;
+
+
+-- 댓글 등록 trigger test
+INSERT INTO comments (comments_code, comments_content, comments_date, comments_likeCount, post_code, parent_comments_code, members_code)
+VALUES (NULL, '저요!', NOW(), 1, 2, NULL, 15);
+
+SELECT
+       *
+  FROM coupon_point b;
+
+SELECT
+       a.members_code, a.members_name, a.members_gradePoint, a.members_couponPoint, a.members_status, a.members_grade_code
+  FROM members a;
 ```
 </details>
 
