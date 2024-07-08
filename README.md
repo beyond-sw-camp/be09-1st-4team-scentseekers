@@ -107,15 +107,61 @@ CREATE TABLE;
 <details style="margin-bottom:16px;">
 <summary>TEST-4: 검색어로 향수 검색</summary>
 : 브랜드명 '디올' 을 검색하여 향수 정보를 조회한다.
-  ![이름 검색 - 디올](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/c20b07d7-ce3f-410a-9aac-5f20fc069a98)
+    
+```sql
+SELECT 
+      p.product_brand
+    , p.product_name
+    , pi_tbl.ingredient_name
+    , p.product_price
+FROM 
+    product p
+LEFT JOIN (
+    SELECT 
+        pii.product_code,
+        i.ingredient_name
+    FROM 
+        ingredient i
+    INNER JOIN 
+        product_ingredient pii ON i.ingredient_code = pii.ingredient_code
+) AS pi_tbl ON pi_tbl.product_code = p.product_code
+WHERE 
+       p.product_brand LIKE '%디올%'
+    OR p.product_name LIKE '%디올%'
+    OR pi_tbl.ingredient_name LIKE '%디올%';
+   
+```
 
+![이름 검색 - 디올](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/90ae628c-2004-4224-b9ca-142dcd3fe788)
 
 <br/>
 : 계열 '머스크' 을 검색하여 해당 계열을 지닌 향수를 조회한다. 
-![계열 검색 - 머스크](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/0267a67a-a8c0-4e9e-9858-3505c56c123b)
+
     
 ```sql
+SELECT 
+      p.product_brand
+    , p.product_name
+    , pi_tbl.ingredient_name
+    , p.product_price
+FROM 
+    product p
+LEFT JOIN (
+    SELECT 
+        pii.product_code,
+        i.ingredient_name
+    FROM 
+        ingredient i
+    INNER JOIN 
+        product_ingredient pii ON i.ingredient_code = pii.ingredient_code
+) AS pi_tbl ON pi_tbl.product_code = p.product_code
+WHERE 
+       p.product_brand LIKE '%머스크%'
+    OR p.product_name LIKE '%머스크%'
+    OR pi_tbl.ingredient_name LIKE '%머스크%';
 ```
+![계열 검색 - 머스크](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/91278bea-4235-4e85-ba8f-b82dfefd4bb9)
+
 </details>
 
 <details style="margin-bottom:16px;">
