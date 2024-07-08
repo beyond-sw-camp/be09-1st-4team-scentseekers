@@ -15,66 +15,67 @@
 
 ## 1. 프로젝트 소개
 
-### 주제
+### 1-1. 주제
 
 ```
 SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입니다.
 여러 키워드와 해시태그를 통해 향수에 대한 다양한 정보를 제공받고, 커뮤니티를 통해 향수를 추천받거나 관련 정보를 공유할 수 있습니다.
 ```
 
-### 사전 조사 및 컨셉  ... ? 
+### 1-2. 사전 조사
+
 #### ■ 유사 어플 조사 <br>
   ![유사어플 (1)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/64375d9e-f98c-44c1-b221-226d614a7249)
   ![유사어플 (2)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/54dc3ee1-29d3-42b6-8cce-d41e419c3bf1)
 
+### 1-3. ScentSeekers 대표 컨셉
 
-#### ■ Scent Seekers 핵심 키워드  <br>
+#### ■ 핵심 키워드  <br>
 ![어플 소개](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/4020604b-43b3-4d0e-b4c8-797b42f2e8ca)
 
 #### ■ 로직 설명 <br>
 ![로직 설명](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/6d358c9f-7e38-4363-b9c7-c1ecf9744c05)
 
+### 1-4. 주요 기능
 
-#### 1. 사용자 맞춤 향수 추천
+#### ■ 사용자 맞춤 향수 추천
 
-```
-✅ 앱에 구축된 많은 향수 DB에서 사용자가 원하는 가격/제형/계절/성별/지속시간/브랜드/무게감/계열을 선택하면 그에 맞는 향수를 추천해준다.
-```
+> ✅ 앱에 구축된 많은 향수 DB에서 사용자가 원하는 가격/제형/계절/성별/지속시간/브랜드/무게감/계열을 선택하면 그에 맞는 향수를 추천해준다.
 
-#### 2. 커뮤니티
+#### ■ 커뮤니티
 
-```
-✅ 같은 향수 관심사를 가진 유저들과 향수 이야기를 주고 받을 수 있다.
-✅ 향수에 대한 질문, 누군가를 위한 향수 추천, 자유 이야기 등등 여러 주제의 글을 남길 수 있다.
-```
+> ✅ 같은 향수 관심사를 가진 유저들과 향수 이야기를 주고 받을 수 있다.
+>
+> ✅ 향수에 대한 질문, 누군가를 위한 향수 추천, 자유 이야기 등등 여러 주제의 글을 남길 수 있다.
 
-#### 3. 향수 검색
+#### ■ 향수 검색
 
-```
-✅ 검색어를 통한 향수 검색: 브랜드명, 향수명, 계열명을 직접 타이핑하여 입력한 키워드와 관련된 향수를 검색할 수 있다.
-✅ 필터링을 통한 향수 검색: 유저가 선택한 향수 요소들로 필터링한 향수를 검색할 수 있다. (계열, 가격대, 지속시간, 계절, 무게감, 성별, 제형)
-✅ 해시태그로 리뷰/게시글 통합 검색: 유저가 직접 추가한 해시태그를 통해 내가 찾고자 하는 향수 정보를 더 광범위하게 찾을 수 있다.
-```
+> ✅ 검색어를 통한 향수 검색: 브랜드명, 향수명, 계열명을 직접 타이핑하여 입력한 키워드와 관련된 향수를 검색할 수 있다.
+>
+> ✅ 필터링을 통한 향수 검색: 유저가 선택한 향수 요소들로 필터링한 향수를 검색할 수 있다. (계열, 가격대, 지속시간, 계절, 무게감, 성별, 제형)
+>
+> ✅ 해시태그로 리뷰/게시글 통합 검색: 유저가 직접 추가한 해시태그를 통해 내가 찾고자 하는 향수 정보를 더 광범위하게 찾을 수 있다.  
 
-#### 4. 향수 정보와 유저 리뷰 제공
+#### ■ 향수 정보와 유저 리뷰 제공
 
-```
-✅ 향수의 브랜드명, 지속시간, 가격, 계열, 향료 등 향수의 기본 정보를 확인할 수 있다.
-✅ 향수를 직접 사용해본 유저의 리뷰를 확인할 수 있다.
-✅ 1~5점 별점 제도가 아닌 [지속성, 생각했던 향과 비슷한지, 어떤 계절에 어울리는지] 를 선택하여 보다 더 와닿는 리뷰를 확인할 수 있다.
-```
+> ✅ 향수의 브랜드명, 지속시간, 가격, 계열, 향료 등 향수의 기본 정보를 확인할 수 있다.
+> 
+> ✅ 향수를 직접 사용해본 유저의 리뷰를 확인할 수 있다.
+> 
+> ✅ 1~5점 별점 제도가 아닌 [지속성, 생각했던 향과 비슷한지, 어떤 계절에 어울리는지] 를 선택하여 보다 더 와닿는 리뷰를 확인할 수 있다.
 
-#### 5. 향수 샘플 증정 이벤트
+#### ■ 향수 샘플 증정 이벤트
 
-```
-✅ 앱 활동을 통한 포인트를 획득하여, 매달 진행하는 향수 샘플 증정 이벤트에 응모할 수 있다.
-✅ 더 활발히 활동하는 유저들에게는 가격대가 더 높은 향수를 샘플로 받아볼 수 있는 기회가 주어진다.
-```
+> ✅ 앱 활동을 통한 포인트를 획득하여, 매달 진행하는 향수 샘플 증정 이벤트에 응모할 수 있다.
+>
+> ✅ 더 활발히 활동하는 유저들에게는 가격대가 더 높은 향수를 샘플로 받아볼 수 있는 기회가 주어진다.
 
+<br/>
+<br/>
 
 ## 2. 프로젝트 설계 및 구현
 
-### WBS
+### 2-1. WBS
 
 <img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/9f0fd1d7-b411-47de-91d1-106e36e8baa8" alt="wbs" />
 
@@ -82,37 +83,47 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 <br/>
 <br/>
 
-### 요구사항 명세서
+### 2-2. 요구사항 명세서
 
-<img src="https://github.com/swcamp9thTeam4/scentseekers/blob/main/%E1%84%8B%E1%85%AD%E1%84%80%E1%85%AE%E1%84%89%E1%85%A1%E1%84%92%E1%85%A1%E1%86%BC_%E1%84%86%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A6%E1%84%89%E1%85%A5.png?raw=true" alt="scentseekers_요구사항_명세서" />
+<img src="https://github.com/swcamp9thTeam4/scentseekers/blob/main/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD_%EB%AA%85%EC%84%B8%EC%84%9C.png?raw=true" alt="scentseekers_요구사항_명세서" />
 
 <br/>
 <br/>
 
-### 데이터베이스 모델링
+### 2-3. 데이터베이스 모델링
 
-- 개념 모델링: <<피그마 캡쳐>>
+> 개념 모델링
+
 ![Group 987603](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/12d482e9-84ff-481b-9493-907c7f5ade2b)
 
 
+> 논리 모델링
 
-- 논리 모델링: <<바커 표기법 da# 캡쳐>>
-  ![논리모델링 최종 2 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/055bbeb1-0dbe-4f29-92e1-1c841b872a18)
+![논리모델링 최종 2 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/055bbeb1-0dbe-4f29-92e1-1c841b872a18)
 
-- 물리 모델링: {erd cloud 캡쳐}
-  <img width="1513" alt="스크린샷 2024-07-08 오후 12 10 12" src="https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/699d2b29-2c70-4396-8e4f-452b1717074d">
+
+> 물리 모델링
+
+<img width="1513" alt="스크린샷 2024-07-08 오후 12 10 12" src="https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/699d2b29-2c70-4396-8e4f-452b1717074d">
 
 <br/>
 <br/>
 
-### 구현 및 테스트
+### 2-4. 구현 및 테스트
+
+#### DB 구조
 
 - 기술 스택: MariaDB (버전명)
 - master/slave Replication 구조
-  - master 데이터베이스: INSERT, UPDATE, DELETE 등의 DML이 발생
-  - slave 데이터베이스
-    - master 데이터베이스를 구독(Observer)하여 자신의 DB에도 master의 변경사항을 반영
-    - 조회(SELECT) 테스트는 slave 데이터 베이스에서 진행
+
+|구분|역할|
+|------|---|
+|master|INSERT, UPDATE, DELETE 등의 DML이 발생|
+|slave|master 데이터베이스를 구독(Observer)하여 자신의 DB에도 master의 변경사항을 반영<br/>조회(SELECT) 테스트는 slave 데이터베이스에서 진행|
+
+<br/>
+
+#### 사전 셋팅 (DDL, 더미데이터)
 
 <details style="margin-bottom:16px;">
 <summary>DDL</summary>
@@ -871,7 +882,8 @@ VALUES (1, -30, 480, NOW(), 6, 1),
 
 <details style="margin-bottom:16px;">
 <summary>TEST-1: 회원정보조회</summary>
-: 회원 가입시 입력한 자신의 정보를 마이페이지에서 조회
+	
+* 회원 가입시 입력한 자신의 정보를 마이페이지에서 조회
     
 ```sql
 DELIMITER //
@@ -911,12 +923,17 @@ DELIMITER ;
 -- 회원코드로 회원정보 조회
 CALL showMembersInfo(1);
 ```
+
+* 실행결과
+  
 ![회원정보조회](https://github.com/swcamp9thTeam4/scentseekers/assets/60764768/7601b7cd-4ba0-4008-bf04-5b199cb5c752)
+
 </details>
 
 <details style="margin-bottom:16px;">
 <summary>TEST-2: 응모권 교환</summary>
-: 자신의 응모권 포인트를 응모권으로 교환하면 응모권 개수가 증가하고 응모권 포인트가 차감됨
+
+* 자신의 응모권 포인트를 응모권으로 교환하면 응모권 개수가 증가하고 응모권 포인트가 차감됨
     
 ```sql
 DELIMITER //
@@ -963,12 +980,17 @@ DELIMITER ;
 -- 회원코드로 응모권 교환
 CALL buyCoupon(4);
 ```
+
+* 실행 결과
+
 ![응모권구매](https://github.com/swcamp9thTeam4/scentseekers/assets/60764768/3cb30423-b9bb-4639-b4e5-77c0e4d19499)
+
 </details>
 
 <details style="margin-bottom:16px;">
 <summary>TEST-3: 전문가 등급 신청</summary>
-: '전문가 인증' 카테고리에서 자격 증명 가능한 파일(자격증, 향수관련업체직원)을 첨부하여 1:1문의 신청 시 관리자가 확인 후 승인하면 전문가 등급 획득
+
+* '전문가 인증' 카테고리에서 자격 증명 가능한 파일(자격증, 향수관련업체직원)을 첨부하여 1:1문의 신청 시 관리자가 확인 후 승인하면 전문가 등급 획득
     
 ```sql
 DELIMITER //
@@ -992,6 +1014,7 @@ END //
 DELIMITER ;
 
 -- 전문가 승인 요청글 작성 -> 관리자 승인 -> 전문가 승인 완료
+INSERT INTO qna
 VALUES 
 (
 NULL,
@@ -1021,12 +1044,17 @@ WHERE qna.qna_code = 7;
 
 SELECT * FROM members WHERE members_code = 10;
 ```
+
+* 실행 결과
+
 ![전문가승인](https://github.com/swcamp9thTeam4/scentseekers/assets/60764768/11447739-0a04-4de7-b593-adcbf7ccfedf)
+
 </details>
 
 <details style="margin-bottom:16px;">
 <summary>TEST-4: 검색어로 향수 검색</summary>
-: 브랜드명 '디올' 을 검색하여 향수 정보를 조회한다.
+
+* 브랜드명 '디올' 을 검색하여 향수 정보를 조회한다.
     
 ```sql
 SELECT 
@@ -1052,12 +1080,14 @@ WHERE
    
 ```
 
+* 실행 결과
+
 ![이름 검색 - 디올](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/90ae628c-2004-4224-b9ca-142dcd3fe788)
 
 <br/>
-: 계열 '머스크' 을 검색하여 해당 계열을 지닌 향수를 조회한다. 
 
-    
+* 계열 '머스크' 을 검색하여 해당 계열을 지닌 향수를 조회한다. 
+
 ```sql
 SELECT 
       p.product_brand
@@ -1080,14 +1110,17 @@ WHERE
     OR p.product_name LIKE '%머스크%'
     OR pi_tbl.ingredient_name LIKE '%머스크%';
 ```
-![계열검색-머스크2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/4704e8a8-0082-4b52-bb91-ed70c85947d4)
 
+* 실행 결과
+
+![계열검색-머스크2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/4704e8a8-0082-4b52-bb91-ed70c85947d4)
 
 </details>
 
 <details style="margin-bottom:16px;">
 <summary>TEST-5: 해시태그로 리뷰/게시글 통합 검색</summary>
-: '시향' 검색을 통해 시향 해시태그를 포함하는 리뷰와 게시글을 통합 조회한다.
+
+* '시향' 검색을 통해 시향 해시태그를 포함하는 리뷰와 게시글을 통합 조회한다.
     
 ```sql
 -- 해시태그 '시향'으로 리뷰와 게시글을 통합 검색하는 쿼리
@@ -1168,6 +1201,9 @@ UNION ALL
 );
 
 ```
+
+* 실행 결과
+
 ![해시태그로 리뷰_게시글 통합검색](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/1bd9d420-5059-4c4a-8412-1c9338a8473e)
 
 </details>
@@ -1205,6 +1241,7 @@ SELECT
 
 </details>
 
+
 <details style="margin-bottom:16px;">
 <summary>TEST-7: 좋아요 TOP5 브랜드 조회</summary>
 
@@ -1230,9 +1267,11 @@ SELECT
 
 </details>
 
+
 <details style="margin-bottom:16px;">
 <summary>TEST-8: 향수 상세정보 확인</summary>
-: 제품 코드가 '11'인 향수의 상세정보를 확인한다.
+
+* 제품 코드가 '11'인 향수의 상세정보를 확인한다.
     
 ```sql
 -- 11번 향수 상세정보 조회 (향수 + 사진 url)
@@ -1261,15 +1300,19 @@ SELECT
 	JOIN category b ON b.category_code = a.category_code
   WHERE product_code = 11;
 ```
+
+* 실행 결과
+
 ![test8](https://github.com/swcamp9thTeam4/scentseekers/assets/57509627/389efba0-ee45-48fb-8e97-a4af7b242634)
 
 </details>
 
+
 <details style="margin-bottom:16px;">
 <summary>TEST-9: 향수 '좋아요' 하기</summary>
-: 1. 향수에 좋아요를 누르면 향수의 좋아요 수를 1 증가시킨다
-<br/>
-: 2. 좋아요를 취소한 경우 향수의 좋아요 수를 1 감소시킨다
+
+* 향수에 좋아요를 누르면 향수의 좋아요 수를 1 증가시킨다
+* 좋아요를 취소한 경우 향수의 좋아요 수를 1 감소시킨다
     
 ```sql
 -- 1. 좋아요 등록
@@ -1298,13 +1341,19 @@ BEGIN
 END //
 DELIMITER ;
 ```
+
+* 실행 결과
+
 ![test9](https://github.com/swcamp9thTeam4/scentseekers/assets/57509627/8b31c792-0922-4652-b567-04913b5fd556)
 
 </details>
 
+
+
 <details style="margin-bottom:16px;">
 <summary>TEST-10: 리뷰 작성</summary>
-: 리뷰를 작성하면 등급 및 응모권 포인트가 각각 10점씩 증가 된다.
+
+* 리뷰를 작성하면 등급 및 응모권 포인트가 각각 10점씩 증가 된다.
     
 ```sql
 SELECT * FROM members;
@@ -1377,12 +1426,17 @@ SELECT
 FROM members m
 JOIN members_grade g ON m.members_grade_code = g.members_grade_code;
 ```
+
+* 실행 결과
+
 ![10(2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/517049fd-ef6c-43da-b1e7-89b21692ee27)
+
 </details>
 
 <details style="margin-bottom:16px;">
 <summary>TEST-11: 리뷰에서 가장 높은 키워드 표시</summary>
-: 전체 향수 리뷰에서 가장 높은 키워드를 표시한다. (지속력, 향이 비슷한지, 어울리는 계절)
+
+* 전체 향수 리뷰에서 가장 높은 키워드를 표시한다. (지속력, 향이 비슷한지, 어울리는 계절)
     
 ```sql
 -- 11번 (1) 전체 향수 리뷰에서높은 키워드 (지속력, 향, 어울리는 계절) + 향수 이름까지 가져오기
@@ -1407,6 +1461,9 @@ FROM review r
 JOIN product p ON r.product_code = p.product_code
 LIMIT 1;
 ```
+
+* 실행 결과
+
 ![11번(1)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/463743c7-7243-46e3-9a5d-44ff534c6393)
 
 ```sql
@@ -1436,12 +1493,19 @@ FROM review r
 JOIN product p ON r.product_code = p.product_code
 GROUP BY r.product_code, p.product_name;
 ```
+
+* 실행 결과
+
 ![11번-2(2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/43e21894-cc02-4dba-ba8a-1bc4d5dad48c)
+
 </details>
+
+
 
 <details style="margin-bottom:16px;">
 <summary>TEST-12: 게시글 등록</summary>
-: 게시글을 등록하면, 회원의 등급/응모권 포인트 내역에 기록되고 회원의 누적 등급 포인트가 10점 추가되며 회원의 현재 등급포인트에 따라 등급을 조정한다.
+
+* 게시글을 등록하면, 회원의 등급/응모권 포인트 내역에 기록되고 회원의 누적 등급 포인트가 10점 추가되며 회원의 현재 등급포인트에 따라 등급을 조정한다.
     
 ```sql
 /* 게시글 작성에 따른 포인트 적립 trigger */
@@ -1533,11 +1597,18 @@ SELECT
        a.members_code, a.members_name, a.members_gradePoint, a.members_couponPoint, a.members_status, a.members_grade_code
   FROM members a;
 ```
+
+* 실행 결과
+
+
 </details>
+
+
 
 <details style="margin-bottom:16px;">
 <summary>TEST-13: 댓글 등록</summary>
-: 댓글이 등록되면, 회원의 등급/응모권 포인트 내역에 기록되고 회원의 누적 응모권 포인트를 5점 증가시킨다.
+
+* 댓글이 등록되면, 회원의 등급/응모권 포인트 내역에 기록되고 회원의 누적 응모권 포인트를 5점 증가시킨다.
     
 ```sql
 /* 댓글 작성에 따른 포인트 적립 trigger */
@@ -1612,11 +1683,18 @@ SELECT
        a.members_code, a.members_name, a.members_gradePoint, a.members_couponPoint, a.members_status, a.members_grade_code
   FROM members a;
 ```
+
+* 실행 결과
+
+
 </details>
+
+
 
 <details style="margin-bottom:16px;">
 <summary>TEST-14: 게시글 신고</summary>
-: 게시글을 신고하면 해당 게시글 신고 count 증가한다.
+
+* 게시글을 신고하면 해당 게시글 신고 count 증가한다.
     
 ```sql
 -- 14(1) 게시글 신고하기
@@ -1643,12 +1721,17 @@ VALUES ('POST', '스팸성 게시글', NOW(), 1);
 
 SELECT * FROM post WHERE report_count >= 1;
 ```
+
+* 실행 결과
+
 ![14(2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/9d81335d-6ebe-4d75-b7b2-33ccbc9db11c)
+
 </details>
 
 <details style="margin-bottom:16px;">
 <summary>TEST-15: 신고 내역 처리</summary>
-: 글의 신고 횟수가 3번 이상인 경우 게시글을 삭제하고 해당 글을 작성한 회원의 포인트를 50점 차감한다.
+
+* 글의 신고 횟수가 3번 이상인 경우 게시글을 삭제하고 해당 글을 작성한 회원의 포인트를 50점 차감한다.
     
 ```sql
 -- 15 신고 내역 처리
@@ -1732,16 +1815,21 @@ SELECT * FROM post WHERE report_count >= 1;
 SELECT * FROM post;
 SELECT * FROM members;
 ```
+
+* 실행 결과
+
 ![15번(1)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/71ba57cb-f608-47a8-b023-99f4162d4ebf)
+
 </details>
+
+
 
 <details style="margin-bottom:16px;">
 <summary>TEST-16: 이벤트 당첨자 추출</summary>
-: '향고수' 등급의 이벤트 응모 회원 중 5명을 랜덤으로 선택한다.
-<br/>
-: '향소년' 등급의 이벤트 응모 회원 중 3명을 랜덤으로 선택한다.
-<br/>
-: '향린이' 등급의 이벤트 응모 회원 중 1명을 랜덤으로 선택한다.
+	
+* '향고수' 등급의 이벤트 응모 회원 중 5명을 랜덤으로 선택한다.
+* '향소년' 등급의 이벤트 응모 회원 중 3명을 랜덤으로 선택한다.
+* '향린이' 등급의 이벤트 응모 회원 중 1명을 랜덤으로 선택한다.
     
 ```sql
 /* 응모 회원 랜덤 추출 **/
@@ -1782,30 +1870,66 @@ SELECT
  LIMIT 1;
 
 ```
+
+
+* 실행 결과
+
+
 </details>
+
 
 ## 3. 동료 평가
 
 ```
-장호정: 
+장호정
+ㄴ 갑:
+ㄴ 을:
+ㄴ 병:
+ㄴ 정:
+ㄴ 무:
 ```
 
 ```
-양현진: 
+양현진
+ㄴ 갑:
+ㄴ 을:
+ㄴ 병:
+ㄴ 정:
+ㄴ 무:
 ```
 
 ```
-박경희: 
+박경희
+ㄴ 갑:
+ㄴ 을:
+ㄴ 병:
+ㄴ 정:
+ㄴ 무:
 ```
 
 ```
-노다민: 
+노다민
+ㄴ 갑:
+ㄴ 을:
+ㄴ 병:
+ㄴ 정:
+ㄴ 무:
 ```
 
 ```
-김시우: 
+김시우
+ㄴ 갑:
+ㄴ 을:
+ㄴ 병:
+ㄴ 정:
+ㄴ 무:
 ```
 
 ```
-윤채연: 
+윤채연
+ㄴ 갑:
+ㄴ 을:
+ㄴ 병:
+ㄴ 정:
+ㄴ 무:
 ```
