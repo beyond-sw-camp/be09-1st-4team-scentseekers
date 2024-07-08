@@ -1,8 +1,4 @@
-
-
-
 ![Slide 16_9 - 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/830ef1d2-9969-4f06-afb6-0315c7eb32aa)
-
 
 ### 팀원
 
@@ -25,15 +21,18 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 ### 1-2. 사전 조사
 
 #### ■ 유사 어플 조사 <br>
-  ![유사어플 (1)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/64375d9e-f98c-44c1-b221-226d614a7249)
-  ![유사어플 (2)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/54dc3ee1-29d3-42b6-8cce-d41e419c3bf1)
+
+![유사어플 (1)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/64375d9e-f98c-44c1-b221-226d614a7249)
+![유사어플 (2)](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/54dc3ee1-29d3-42b6-8cce-d41e419c3bf1)
 
 ### 1-3. ScentSeekers 대표 컨셉
 
-#### ■ 핵심 키워드  <br>
+#### ■ 핵심 키워드 <br>
+
 ![어플 소개](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/4020604b-43b3-4d0e-b4c8-797b42f2e8ca)
 
 #### ■ 로직 설명 <br>
+
 ![로직 설명](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/6d358c9f-7e38-4363-b9c7-c1ecf9744c05)
 
 ### 1-4. 주요 기능
@@ -54,14 +53,14 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 >
 > ✅ 필터링을 통한 향수 검색: 유저가 선택한 향수 요소들로 필터링한 향수를 검색할 수 있다. (계열, 가격대, 지속시간, 계절, 무게감, 성별, 제형)
 >
-> ✅ 해시태그로 리뷰/게시글 통합 검색: 유저가 직접 추가한 해시태그를 통해 내가 찾고자 하는 향수 정보를 더 광범위하게 찾을 수 있다.  
+> ✅ 해시태그로 리뷰/게시글 통합 검색: 유저가 직접 추가한 해시태그를 통해 내가 찾고자 하는 향수 정보를 더 광범위하게 찾을 수 있다.
 
 #### ■ 향수 정보와 유저 리뷰 제공
 
 > ✅ 향수의 브랜드명, 지속시간, 가격, 계열, 향료 등 향수의 기본 정보를 확인할 수 있다.
-> 
+>
 > ✅ 향수를 직접 사용해본 유저의 리뷰를 확인할 수 있다.
-> 
+>
 > ✅ 1~5점 별점 제도가 아닌 [지속성, 생각했던 향과 비슷한지, 어떤 계절에 어울리는지] 를 선택하여 보다 더 와닿는 리뷰를 확인할 수 있다.
 
 #### ■ 향수 샘플 증정 이벤트
@@ -85,7 +84,7 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 
 ### 2-2. 요구사항 명세서
 
-<img src="https://github.com/swcamp9thTeam4/scentseekers/blob/main/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD_%EB%AA%85%EC%84%B8%EC%84%9C.png?raw=true" alt="scentseekers_요구사항_명세서" />
+<img src="https://github.com/swcamp9thTeam4/scentseekers/blob/main/srs/%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD_%EB%AA%85%EC%84%B8%EC%84%9C.png?raw=true" alt="scentseekers_요구사항_명세서" />
 
 <br/>
 <br/>
@@ -96,11 +95,9 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 
 ![Group 987603](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/12d482e9-84ff-481b-9493-907c7f5ade2b)
 
-
 > 논리 모델링
 
 ![논리모델링 최종 2 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/055bbeb1-0dbe-4f29-92e1-1c841b872a18)
-
 
 > 물리 모델링
 
@@ -116,10 +113,10 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 - 기술 스택: MariaDB (버전명)
 - master/slave Replication 구조
 
-|구분|역할|
-|------|---|
-|master|INSERT, UPDATE, DELETE 등의 DML이 발생|
-|slave|master 데이터베이스를 구독(Observer)하여 자신의 DB에도 master의 변경사항을 반영<br/>조회(SELECT) 테스트는 slave 데이터베이스에서 진행|
+| 구분   | 역할                                                                                                                                  |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| master | INSERT, UPDATE, DELETE 등의 DML이 발생                                                                                                |
+| slave  | master 데이터베이스를 구독(Observer)하여 자신의 DB에도 master의 변경사항을 반영<br/>조회(SELECT) 테스트는 slave 데이터베이스에서 진행 |
 
 <br/>
 
@@ -129,7 +126,7 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 <summary>DDL</summary>
     
 ```sql
--- 테이블 클리어 
+-- 테이블 클리어
 
 DROP TABLE IF EXISTS qna_photo;
 DROP TABLE IF EXISTS qna;
@@ -160,350 +157,349 @@ DROP TABLE if EXISTS product;
 DROP TABLE if EXISTS category;
 DROP TABLE if EXISTS ingredient;
 
-
 -- 향료
 CREATE TABLE ingredient (
-  ingredient_code INT PRIMARY KEY AUTO_INCREMENT,
-  ingredient_name VARCHAR(255) NOT NULL
+ingredient_code INT PRIMARY KEY AUTO_INCREMENT,
+ingredient_name VARCHAR(255) NOT NULL
 ) ENGINE = INNODB;
 
 -- 계열
 CREATE TABLE category (
-  category_code INT PRIMARY KEY AUTO_INCREMENT,
-  category_type VARCHAR(255) NOT NULL,
-  CHECK(category_type IN ('플로럴','프루티','그린','오셔닉','아쿠아','시트러스','구르망','타바코','우디','스파이시','오리엔탈','머스크','시프레'))
+category_code INT PRIMARY KEY AUTO_INCREMENT,
+category_type VARCHAR(255) NOT NULL,
+CHECK(category_type IN ('플로럴','프루티','그린','오셔닉','아쿠아','시트러스','구르망','타바코','우디','스파이시','오리엔탈','머스크','시프레'))
 ) ENGINE = INNODB;
 
 -- 제품
 CREATE TABLE product (
-  product_code INT PRIMARY KEY AUTO_INCREMENT,
-  product_name VARCHAR(255) NOT NULL,
-  product_price INT NOT NULL,
-  product_texture VARCHAR(255) NOT NULL,
-  product_season VARCHAR(255) NOT NULL,
-  product_gender VARCHAR(255) NOT NULL,
-  product_duration VARCHAR(255) NOT NULL,
-  product_brand VARCHAR(255) NOT NULL,
-  product_weight VARCHAR(255) NOT NULL,
-  product_description text NOT NULL,
-  product_likeCnt INT NOT NULL DEFAULT 0,
-  CHECK(product_texture IN ('액체','고체','퍼퓸오일','롤온')),
-  CHECK(product_season IN ('봄','여름','가을','겨울')),
-  CHECK(product_gender IN ('남자','여자','공통')),
-  CHECK(product_duration IN ('오드코롱(1~2)','오드뚜왈렛(3~4)','오드퍼퓸(4~6)','퍼퓸(6~7)')),
-  CHECK(product_weight IN ('가벼움','무거움'))
+product_code INT PRIMARY KEY AUTO_INCREMENT,
+product_name VARCHAR(255) NOT NULL,
+product_price INT NOT NULL,
+product_texture VARCHAR(255) NOT NULL,
+product_season VARCHAR(255) NOT NULL,
+product_gender VARCHAR(255) NOT NULL,
+product_duration VARCHAR(255) NOT NULL,
+product_brand VARCHAR(255) NOT NULL,
+product_weight VARCHAR(255) NOT NULL,
+product_description text NOT NULL,
+product_likeCnt INT NOT NULL DEFAULT 0,
+CHECK(product_texture IN ('액체','고체','퍼퓸오일','롤온')),
+CHECK(product_season IN ('봄','여름','가을','겨울')),
+CHECK(product_gender IN ('남자','여자','공통')),
+CHECK(product_duration IN ('오드코롱(1~2)','오드뚜왈렛(3~4)','오드퍼퓸(4~6)','퍼퓸(6~7)')),
+CHECK(product_weight IN ('가벼움','무거움'))
 ) ENGINE = INNODB;
 
 -- 제품의 향
 CREATE TABLE product_ingredient (
-  product_ingredient_code INT PRIMARY KEY AUTO_INCREMENT,
-  product_ingredient_ingredientNote VARCHAR(255) NOT NULL,
-  product_code INT NOT NULL,
-  ingredient_code INT NOT NULL,
-  CHECK(product_ingredient_ingredientNote IN('TOP','MIDDLE','BASE')),
-  FOREIGN KEY (product_code)
-  REFERENCES product(product_code),
-  FOREIGN KEY (ingredient_code)
-  REFERENCES ingredient(ingredient_code)
+product_ingredient_code INT PRIMARY KEY AUTO_INCREMENT,
+product_ingredient_ingredientNote VARCHAR(255) NOT NULL,
+product_code INT NOT NULL,
+ingredient_code INT NOT NULL,
+CHECK(product_ingredient_ingredientNote IN('TOP','MIDDLE','BASE')),
+FOREIGN KEY (product_code)
+REFERENCES product(product_code),
+FOREIGN KEY (ingredient_code)
+REFERENCES ingredient(ingredient_code)
 ) ENGINE = INNODB;
 
 -- 제품의 계열
 CREATE TABLE product_category (
-  product_category_code INT PRIMARY KEY AUTO_INCREMENT,
-  product_code INT NOT NULL,
-  category_code INT NOT NULL,
-  FOREIGN KEY (product_code)
-  REFERENCES product(product_code),
-  FOREIGN KEY (category_code)
-  REFERENCES category(category_code)
+product_category_code INT PRIMARY KEY AUTO_INCREMENT,
+product_code INT NOT NULL,
+category_code INT NOT NULL,
+FOREIGN KEY (product_code)
+REFERENCES product(product_code),
+FOREIGN KEY (category_code)
+REFERENCES category(category_code)
 ) ENGINE = INNODB;
 
 -- 제품 사진
 CREATE TABLE product_photo (
-  product_photo_code INT PRIMARY KEY AUTO_INCREMENT,
-  product_photo_url VARCHAR(255) NOT NULL,
-  product_code INT NOT NULL,
-  FOREIGN KEY (product_code)
-  REFERENCES product(product_code)
+product_photo_code INT PRIMARY KEY AUTO_INCREMENT,
+product_photo_url VARCHAR(255) NOT NULL,
+product_code INT NOT NULL,
+FOREIGN KEY (product_code)
+REFERENCES product(product_code)
 ) ENGINE = INNODB;
 
 -- 회원 등급
 CREATE TABLE members_grade (
-    members_grade_code INT AUTO_INCREMENT,
-    members_grade_name VARCHAR(255) NOT NULL,
-    members_grade_pointCriteria INT NOT NULL,
-    PRIMARY KEY (members_grade_code)
+members_grade_code INT AUTO_INCREMENT,
+members_grade_name VARCHAR(255) NOT NULL,
+members_grade_pointCriteria INT NOT NULL,
+PRIMARY KEY (members_grade_code)
 )ENGINE=INNODB;
 
 -- 포인트 적립/차감 사유
 CREATE TABLE reason (
-    reason_code INT AUTO_INCREMENT,
-    reason_name VARCHAR(255) NOT NULL,
-    reason_pointCriteria INT NOT NULL,
-    PRIMARY KEY (reason_code)
+reason_code INT AUTO_INCREMENT,
+reason_name VARCHAR(255) NOT NULL,
+reason_pointCriteria INT NOT NULL,
+PRIMARY KEY (reason_code)
 )ENGINE=INNODB;
 
 -- 회원 테이블
 CREATE TABLE members (
-    members_code INT AUTO_INCREMENT,
-    members_email VARCHAR(255) NOT NULL,
-    members_name VARCHAR(255) NOT NULL,
-    members_ageRange INT NOT NULL,
-    members_gender VARCHAR(10) NOT NULL,
-    members_phoneNumber VARCHAR(255) NOT NULL,
-    members_password VARCHAR(255) NOT NULL,
-    members_date DATETIME NOT NULL,
-    members_expCert VARCHAR(255),
-    members_infoDis VARCHAR(255) NOT NULL,
-    members_withdrawalDate DATETIME,
-    members_gradePoint INT NOT NULL,
-    members_couponPoint INT,
-    members_status VARCHAR(255) NOT NULL,
-    members_couponPointCnt INT NOT NULL,
-    members_grade_code INT NOT NULL,
-    members_declarationCnt INT NOT NULL,
-    members_nickname VARCHAR(255) NOT NULL,
-	  -- FK
-    FOREIGN KEY (members_grade_code) REFERENCES members_grade(members_grade_code),
-    PRIMARY KEY (members_code),
-    CHECK (members_ageRange IN (10, 20, 30, 40, 50, 60)),
-    CHECK (members_gender IN ('남성', '여성')),
-    CHECK (members_infoDis IN ('공개', '비공개')),
-    CHECK (members_status IN ('정상', '탈퇴', '강퇴'))
+members_code INT AUTO_INCREMENT,
+members_email VARCHAR(255) NOT NULL,
+members_name VARCHAR(255) NOT NULL,
+members_ageRange INT NOT NULL,
+members_gender VARCHAR(10) NOT NULL,
+members_phoneNumber VARCHAR(255) NOT NULL,
+members_password VARCHAR(255) NOT NULL,
+members_date DATETIME NOT NULL,
+members_expCert VARCHAR(255),
+members_infoDis VARCHAR(255) NOT NULL,
+members_withdrawalDate DATETIME,
+members_gradePoint INT NOT NULL,
+members_couponPoint INT,
+members_status VARCHAR(255) NOT NULL,
+members_couponPointCnt INT NOT NULL,
+members_grade_code INT NOT NULL,
+members_declarationCnt INT NOT NULL,
+members_nickname VARCHAR(255) NOT NULL,
+-- FK
+FOREIGN KEY (members_grade_code) REFERENCES members_grade(members_grade_code),
+PRIMARY KEY (members_code),
+CHECK (members_ageRange IN (10, 20, 30, 40, 50, 60)),
+CHECK (members_gender IN ('남성', '여성')),
+CHECK (members_infoDis IN ('공개', '비공개')),
+CHECK (members_status IN ('정상', '탈퇴', '강퇴'))
 ) ENGINE = INNODB;
 
 -- 회원의 등급 포인트 내역
 CREATE TABLE grade_point (
-	grade_point_code INT AUTO_INCREMENT,
-	grade_point_change INT NOT NULL,
-	grade_point_accum INT NOT NULL,
-	grade_point_date DATETIME NOT NULL,
-	reason_code INT NOT NULL,
-	members_code INT NOT NULL,
-	-- FK
-   FOREIGN KEY (reason_code) REFERENCES reason(reason_code),
-	-- FK
-   FOREIGN KEY (members_code) REFERENCES members(members_code),
-   PRIMARY KEY (grade_point_code)
+grade_point_code INT AUTO_INCREMENT,
+grade_point_change INT NOT NULL,
+grade_point_accum INT NOT NULL,
+grade_point_date DATETIME NOT NULL,
+reason_code INT NOT NULL,
+members_code INT NOT NULL,
+-- FK
+FOREIGN KEY (reason_code) REFERENCES reason(reason_code),
+-- FK
+FOREIGN KEY (members_code) REFERENCES members(members_code),
+PRIMARY KEY (grade_point_code)
 )ENGINE = INNODB;
 
 -- 회원의 응모권 포인트 내역
 CREATE TABLE coupon_point (
-    coupon_point_code INT AUTO_INCREMENT,
-    coupon_point_change INT NOT NULL,
-    coupon_point_accum INT NOT NULL,
-    coupon_point_date DATETIME NOT NULL,
-    reason_code INT NOT NULL,
-    members_code INT NOT NULL,
-		-- FK
-    FOREIGN KEY (reason_code) REFERENCES reason(reason_code),
-    FOREIGN KEY (members_code) REFERENCES members(members_code),
-    PRIMARY KEY (coupon_point_code)
+coupon_point_code INT AUTO_INCREMENT,
+coupon_point_change INT NOT NULL,
+coupon_point_accum INT NOT NULL,
+coupon_point_date DATETIME NOT NULL,
+reason_code INT NOT NULL,
+members_code INT NOT NULL,
+-- FK
+FOREIGN KEY (reason_code) REFERENCES reason(reason_code),
+FOREIGN KEY (members_code) REFERENCES members(members_code),
+PRIMARY KEY (coupon_point_code)
 )ENGINE=INNODB;
 
 -- 회원의 제품 좋아요
 CREATE TABLE product_like (
-	 product_like_code INT AUTO_INCREMENT,
-	 members_code INT NOT NULL,
-	 product_code INT NOT NULL,
-		-- FK
-    FOREIGN KEY (members_code) REFERENCES members(members_code),
-    FOREIGN KEY (product_code) REFERENCES product(product_code),
-	 PRIMARY KEY (product_like_code)
+product_like_code INT AUTO_INCREMENT,
+members_code INT NOT NULL,
+product_code INT NOT NULL,
+-- FK
+FOREIGN KEY (members_code) REFERENCES members(members_code),
+FOREIGN KEY (product_code) REFERENCES product(product_code),
+PRIMARY KEY (product_like_code)
 ) ENGINE = INNODB;
 
 -- 게시글
 CREATE TABLE if NOT EXISTS post
 (
-	post_code INT PRIMARY KEY AUTO_INCREMENT,
-	post_title VARCHAR(255) NOT NULL,
-	post_content TEXT NOT NULL,
-	post_date DATETIME NOT NULL,
-	post_category VARCHAR(255),
-	post_like INT NOT NULL,
-	report_count INT NOT NULL,
-	report_complete VARCHAR(255) NOT NULL,
-	members_code INT NOT NULL,
-	CHECK(post_category IN ('추천', '질문', '자유')),
-	CHECK(report_complete IN ('Y', 'N')), 
-	FOREIGN KEY(members_code) REFERENCES members(members_code) 
+post_code INT PRIMARY KEY AUTO_INCREMENT,
+post_title VARCHAR(255) NOT NULL,
+post_content TEXT NOT NULL,
+post_date DATETIME NOT NULL,
+post_category VARCHAR(255),
+post_like INT NOT NULL,
+report_count INT NOT NULL,
+report_complete VARCHAR(255) NOT NULL,
+members_code INT NOT NULL,
+CHECK(post_category IN ('추천', '질문', '자유')),
+CHECK(report_complete IN ('Y', 'N')),
+FOREIGN KEY(members_code) REFERENCES members(members_code)
 ) ENGINE=INNODB;
 
 -- 게시글사진
 CREATE TABLE if NOT EXISTS post_photo
 (
-	post_photo_code INT PRIMARY KEY AUTO_INCREMENT,
-	post_photo_URL VARCHAR(255) NOT NULL,
-	post_code INT NOT NULL,
-	FOREIGN KEY(post_code)
-	REFERENCES post(post_code) 
+post_photo_code INT PRIMARY KEY AUTO_INCREMENT,
+post_photo_URL VARCHAR(255) NOT NULL,
+post_code INT NOT NULL,
+FOREIGN KEY(post_code)
+REFERENCES post(post_code)
 ) ENGINE=INNODB;
 
 -- 북마크
 CREATE TABLE if NOT EXISTS bookmark
 (
-	bookmark_code INT PRIMARY KEY AUTO_INCREMENT,
-	post_code INT NOT NULL,
-	members_code INT NOT NULL,
-	FOREIGN KEY(post_code) REFERENCES post(post_code),
-	FOREIGN KEY(members_code) REFERENCES members(members_code)
+bookmark_code INT PRIMARY KEY AUTO_INCREMENT,
+post_code INT NOT NULL,
+members_code INT NOT NULL,
+FOREIGN KEY(post_code) REFERENCES post(post_code),
+FOREIGN KEY(members_code) REFERENCES members(members_code)
 ) ENGINE=INNODB;
 
 -- 게시글 좋아요
 CREATE TABLE if NOT EXISTS post_like
 (
-	post_like_code INT PRIMARY KEY AUTO_INCREMENT,
-	post_code INT NOT NULL,
-	members_code INT NOT NULL,
-	FOREIGN KEY(post_code) REFERENCES post(post_code),
-	FOREIGN KEY(members_code) REFERENCES members(members_code)
+post_like_code INT PRIMARY KEY AUTO_INCREMENT,
+post_code INT NOT NULL,
+members_code INT NOT NULL,
+FOREIGN KEY(post_code) REFERENCES post(post_code),
+FOREIGN KEY(members_code) REFERENCES members(members_code)
 ) ENGINE=INNODB;
 
 -- 댓글
 CREATE TABLE comments (
-    comments_code INT AUTO_INCREMENT,
-    comments_content VARCHAR(255) NOT NULL,
-    comments_date DATETIME NOT NULL,
-    comments_likeCount INT NOT NULL,
-    post_code INT NOT NULL,
-    parent_comments_code INT,
-    members_code INT NOT NULL,
-    -- FK
-    FOREIGN KEY (post_code) REFERENCES post(post_code),
-    FOREIGN KEY (parent_comments_code) REFERENCES comments(comments_code),
-    FOREIGN KEY (members_code) REFERENCES members(members_code),
-    PRIMARY KEY (comments_code)
+comments_code INT AUTO_INCREMENT,
+comments_content VARCHAR(255) NOT NULL,
+comments_date DATETIME NOT NULL,
+comments_likeCount INT NOT NULL,
+post_code INT NOT NULL,
+parent_comments_code INT,
+members_code INT NOT NULL,
+-- FK
+FOREIGN KEY (post_code) REFERENCES post(post_code),
+FOREIGN KEY (parent_comments_code) REFERENCES comments(comments_code),
+FOREIGN KEY (members_code) REFERENCES members(members_code),
+PRIMARY KEY (comments_code)
 )ENGINE=INNODB;
 
 -- 댓글 좋아요
 CREATE TABLE comments_like (
-    comments_like_code INT AUTO_INCREMENT,
-    comments_code INT NOT NULL,
-    members_code INT NOT NULL,
-    PRIMARY KEY (comments_like_code),
-    -- FK
-		FOREIGN KEY (comments_code) REFERENCES comments(comments_code),
-		FOREIGN KEY (members_code) REFERENCES members(members_code)
+comments_like_code INT AUTO_INCREMENT,
+comments_code INT NOT NULL,
+members_code INT NOT NULL,
+PRIMARY KEY (comments_like_code),
+-- FK
+FOREIGN KEY (comments_code) REFERENCES comments(comments_code),
+FOREIGN KEY (members_code) REFERENCES members(members_code)
 )ENGINE=INNODB;
 
 -- 리뷰
 CREATE TABLE if NOT EXISTS review (
-    review_code INT AUTO_INCREMENT,
-    review_content TEXT NOT NULL,
-    review_duration VARCHAR(255)
-	 CHECK(review_duration IN ('오래가요', '비슷해요', '생각보다 짧아요')),
-    review_season VARCHAR(255)
-	 CHECK(review_season IN ('봄', '여름', '가을', '겨울')),
-    review_similarity VARCHAR(255)
-	 CHECK(review_similarity IN ('만족', '보통', '아쉬워요')),
-    review_likeCount INT NOT NULL,
-    product_code INT NOT NULL,
-    members_code INT NOT NULL,
-    PRIMARY KEY (review_code),
-    FOREIGN KEY (product_code)
-    REFERENCES product (product_code),
-    FOREIGN KEY (members_code)
-    REFERENCES members (members_code)
+review_code INT AUTO_INCREMENT,
+review_content TEXT NOT NULL,
+review_duration VARCHAR(255)
+CHECK(review_duration IN ('오래가요', '비슷해요', '생각보다 짧아요')),
+review_season VARCHAR(255)
+CHECK(review_season IN ('봄', '여름', '가을', '겨울')),
+review_similarity VARCHAR(255)
+CHECK(review_similarity IN ('만족', '보통', '아쉬워요')),
+review_likeCount INT NOT NULL,
+product_code INT NOT NULL,
+members_code INT NOT NULL,
+PRIMARY KEY (review_code),
+FOREIGN KEY (product_code)
+REFERENCES product (product_code),
+FOREIGN KEY (members_code)
+REFERENCES members (members_code)
 ) ENGINE=INNODB;
 
 -- 리뷰 좋아요
 CREATE TABLE if NOT EXISTS review_like (
-    review_like_code INT AUTO_INCREMENT,
-    review_code INT NOT NULL,
-    members_code INT NOT NULL,
-    PRIMARY KEY (review_like_code),
-    FOREIGN KEY (review_code)
-    REFERENCES review (review_code),
-    FOREIGN KEY (members_code)
-    REFERENCES members (members_code)
+review_like_code INT AUTO_INCREMENT,
+review_code INT NOT NULL,
+members_code INT NOT NULL,
+PRIMARY KEY (review_like_code),
+FOREIGN KEY (review_code)
+REFERENCES review (review_code),
+FOREIGN KEY (members_code)
+REFERENCES members (members_code)
 ) ENGINE=INNODB;
 
 -- 해시태그
 CREATE TABLE if NOT EXISTS hashtag (
-    hashtag_code INT AUTO_INCREMENT,
-    hashtag_name VARCHAR(255) NOT NULL,
-    PRIMARY KEY (hashtag_code)
+hashtag_code INT AUTO_INCREMENT,
+hashtag_name VARCHAR(255) NOT NULL,
+PRIMARY KEY (hashtag_code)
 ) ENGINE=INNODB;
 
 -- 리뷰 해시태그
 CREATE TABLE if NOT EXISTS review_hashtag (
-    review_hashtag_code INT AUTO_INCREMENT,
-    review_code INT NOT NULL,
-    hashtag_code INT NOT NULL,
-    PRIMARY KEY (review_hashtag_code),
-    FOREIGN KEY (review_code)
-    REFERENCES review (review_code),
-    FOREIGN KEY (hashtag_code)
-    REFERENCES hashtag (hashtag_code)
+review_hashtag_code INT AUTO_INCREMENT,
+review_code INT NOT NULL,
+hashtag_code INT NOT NULL,
+PRIMARY KEY (review_hashtag_code),
+FOREIGN KEY (review_code)
+REFERENCES review (review_code),
+FOREIGN KEY (hashtag_code)
+REFERENCES hashtag (hashtag_code)
 ) ENGINE=INNODB;
 
 -- 게시글 해시태그
 CREATE TABLE if NOT EXISTS post_hashtag
 (
-	post_hashtag_code INT PRIMARY KEY AUTO_INCREMENT,
-	post_code INT NOT NULL,
-	hashtag_code INT NOT NULL,
-	FOREIGN KEY(post_code) REFERENCES post(post_code),
-	FOREIGN KEY(hashtag_code) REFERENCES hashtag(hashtag_code)
+post_hashtag_code INT PRIMARY KEY AUTO_INCREMENT,
+post_code INT NOT NULL,
+hashtag_code INT NOT NULL,
+FOREIGN KEY(post_code) REFERENCES post(post_code),
+FOREIGN KEY(hashtag_code) REFERENCES hashtag(hashtag_code)
 ) ENGINE=INNODB;
 
 -- admin 테이블
 CREATE TABLE IF NOT EXISTS admin (
-  admin_code int PRIMARY KEY AUTO_INCREMENT,
-  admin_name varchar(255) NOT NULL,
-  admin_id varchar(255) NOT NULL,
-  admin_pw varchar(255) NOT NULL,
-  admin_deleteStatus varchar(255) NOT NULL DEFAULT 'N' CHECK(admin_deleteStatus IN ('Y', 'N'))
+admin_code int PRIMARY KEY AUTO_INCREMENT,
+admin_name varchar(255) NOT NULL,
+admin_id varchar(255) NOT NULL,
+admin_pw varchar(255) NOT NULL,
+admin_deleteStatus varchar(255) NOT NULL DEFAULT 'N' CHECK(admin_deleteStatus IN ('Y', 'N'))
 ) ENGINE=INNODB;
 
 -- megazine 테이블
 CREATE TABLE IF NOT EXISTS megazine (
-  megazine_code int PRIMARY KEY AUTO_INCREMENT,
-  megazine_title varchar(255) NOT NULL,
-  megazine_detail varchar(255) NOT NULL,
-  write_date datetime NOT NULL,
-  admin_code int NOT NULL,
-  FOREIGN KEY(admin_code) REFERENCES admin(admin_code)
+megazine_code int PRIMARY KEY AUTO_INCREMENT,
+megazine_title varchar(255) NOT NULL,
+megazine_detail varchar(255) NOT NULL,
+write_date datetime NOT NULL,
+admin_code int NOT NULL,
+FOREIGN KEY(admin_code) REFERENCES admin(admin_code)
 ) ENGINE=INNODB;
 
 -- report 테이블
 CREATE TABLE IF NOT EXISTS report(
-  report_code int PRIMARY KEY AUTO_INCREMENT,
-  report_category varchar(255) NOT NULL CHECK(report_category IN ('REVIEW', 'POST', 'COMMENT')),
-  report_reason varchar(255) NOT NULL,
-  report_date datetime NOT NULL,
-  report_postCode int NOT NULL
+report_code int PRIMARY KEY AUTO_INCREMENT,
+report_category varchar(255) NOT NULL CHECK(report_category IN ('REVIEW', 'POST', 'COMMENT')),
+report_reason varchar(255) NOT NULL,
+report_date datetime NOT NULL,
+report_postCode int NOT NULL
 ) ENGINE=INNODB;
 
 -- qna 테이블
 CREATE TABLE IF NOT EXISTS qna(
-  qna_code int PRIMARY KEY AUTO_INCREMENT,
-  qna_category varchar(255) NOT NULL CHECK(qna_category IN ('일반문의', '전문가 인증')),
-  qna_title varchar(255) NOT NULL,
-  qna_content varchar(255) NOT NULL,
-  qna_date datetime NOT NULL,
-  qna_responseContent varchar(255),
-  qna_responseDate datetime,
-  admin_code int,
-  members_code int NOT NULL,
-  FOREIGN KEY(admin_code) REFERENCES admin(admin_code),
-  FOREIGN KEY(members_code) REFERENCES members(members_code)
+qna_code int PRIMARY KEY AUTO_INCREMENT,
+qna_category varchar(255) NOT NULL CHECK(qna_category IN ('일반문의', '전문가 인증')),
+qna_title varchar(255) NOT NULL,
+qna_content varchar(255) NOT NULL,
+qna_date datetime NOT NULL,
+qna_responseContent varchar(255),
+qna_responseDate datetime,
+admin_code int,
+members_code int NOT NULL,
+FOREIGN KEY(admin_code) REFERENCES admin(admin_code),
+FOREIGN KEY(members_code) REFERENCES members(members_code)
 ) ENGINE=INNODB;
 
 -- qna_photo 테이블
 CREATE TABLE IF NOT EXISTS qna_photo(
-  qna_photo_code int PRIMARY KEY AUTO_INCREMENT,
-  qna_photoURL varchar(255) NOT NULL,
-  qna_code int NOT NULL,
-  FOREIGN KEY(qna_code) REFERENCES qna(qna_code)
+qna_photo_code int PRIMARY KEY AUTO_INCREMENT,
+qna_photoURL varchar(255) NOT NULL,
+qna_code int NOT NULL,
+FOREIGN KEY(qna_code) REFERENCES qna(qna_code)
 ) ENGINE=INNODB;
 
-```
+````
 </details>
 
 <details style="margin-bottom:16px;">
 <summary>더미데이터 전체 INSERT</summary>
-    
+
 ```sql
 INSERT INTO product (product_code, product_name, product_price, product_texture, product_season, product_gender, product_duration, product_brand, product_weight, product_description, product_likeCnt) VALUES
 ('1', '샤넬 No. 5', '180000', '액체', '가을', '남자', '퍼퓸(6~7)', '샤넬', '가벼움', '전통적이고 우아한 꽃향수', '609'),
@@ -815,7 +811,7 @@ INSERT INTO admin (admin_code, admin_name, admin_id, admin_pw, admin_deleteStatu
 ('3', '신입관리자', 'newadmin', 'newadmin', 'N');
 
 
-INSERT INTO reason VALUES 
+INSERT INTO reason VALUES
 (1, '출석', 1),
 (2, '게시글작성', 10),
 (3, '리뷰작성', 10),
@@ -871,7 +867,8 @@ VALUES (1, -30, 480, NOW(), 6, 1),
 (NULL, -30, 20, NOW(), 6, 16),
 (NULL, 10, 90, NOW(), 2, 2),
 (NULL, 10, 211, NOW(), 2, 4);
-```
+````
+
 </details>
 
 <br/>
@@ -889,43 +886,44 @@ VALUES (1, -30, 480, NOW(), 6, 1),
 DELIMITER //
 
 CREATE OR REPLACE PROCEDURE showMembersInfo (
-    IN membersCode INT
+IN membersCode INT
 )
 BEGIN
-    SELECT 
-        a.members_code AS '회원번호',
-        a.members_email AS '이메일',
-        a.members_name AS '이름',
-        a.members_ageRange AS '연령대',
-        a.members_gender AS '성별',
-        a.members_phoneNumber AS '전화번호',
-        a.members_date AS '가입날짜',
-        a.members_expCert AS '전문가자격',
-        a.members_infoDis AS '정보공개여부',
-        a.members_withdrawalDate AS '회원탈퇴날짜',
-        a.members_gradePoint AS '등급포인트',
-        a.members_couponPoint AS '응모권포인트',
-        a.members_status AS '회원상태',
-        a.members_couponPointCnt AS '응모권개수',
-        b.members_grade_name AS '등급명',
-        a.members_declarationCnt AS '신고당한횟수',
-        a.members_nickname AS '닉네임'
-    FROM 
-        members a
-    JOIN 
-        members_grade b ON b.members_grade_code = a.members_grade_code
-    WHERE 
-        a.members_code = membersCode;
+SELECT
+a.members_code AS '회원번호',
+a.members_email AS '이메일',
+a.members_name AS '이름',
+a.members_ageRange AS '연령대',
+a.members_gender AS '성별',
+a.members_phoneNumber AS '전화번호',
+a.members_date AS '가입날짜',
+a.members_expCert AS '전문가자격',
+a.members_infoDis AS '정보공개여부',
+a.members_withdrawalDate AS '회원탈퇴날짜',
+a.members_gradePoint AS '등급포인트',
+a.members_couponPoint AS '응모권포인트',
+a.members_status AS '회원상태',
+a.members_couponPointCnt AS '응모권개수',
+b.members_grade_name AS '등급명',
+a.members_declarationCnt AS '신고당한횟수',
+a.members_nickname AS '닉네임'
+FROM
+members a
+JOIN
+members_grade b ON b.members_grade_code = a.members_grade_code
+WHERE
+a.members_code = membersCode;
 END //
 
 DELIMITER ;
 
 -- 회원코드로 회원정보 조회
 CALL showMembersInfo(1);
-```
+
+````
 
 * 실행결과
-  
+
 ![회원정보조회](https://github.com/swcamp9thTeam4/scentseekers/assets/60764768/7601b7cd-4ba0-4008-bf04-5b199cb5c752)
 
 </details>
@@ -934,7 +932,7 @@ CALL showMembersInfo(1);
 <summary>TEST-2: 응모권 교환</summary>
 
 * 자신의 응모권 포인트를 응모권으로 교환하면 응모권 개수가 증가하고 응모권 포인트가 차감됨
-    
+
 ```sql
 DELIMITER //
 
@@ -979,9 +977,9 @@ DELIMITER ;
 
 -- 회원코드로 응모권 교환
 CALL buyCoupon(4);
-```
+````
 
-* 실행 결과
+- 실행 결과
 
 ![응모권구매](https://github.com/swcamp9thTeam4/scentseekers/assets/60764768/3cb30423-b9bb-4639-b4e5-77c0e4d19499)
 
@@ -990,8 +988,8 @@ CALL buyCoupon(4);
 <details style="margin-bottom:16px;">
 <summary>TEST-3: 전문가 등급 신청</summary>
 
-* '전문가 인증' 카테고리에서 자격 증명 가능한 파일(자격증, 향수관련업체직원)을 첨부하여 1:1문의 신청 시 관리자가 확인 후 승인하면 전문가 등급 획득
-    
+- '전문가 인증' 카테고리에서 자격 증명 가능한 파일(자격증, 향수관련업체직원)을 첨부하여 1:1문의 신청 시 관리자가 확인 후 승인하면 전문가 등급 획득
+
 ```sql
 DELIMITER //
 
@@ -1015,7 +1013,7 @@ DELIMITER ;
 
 -- 전문가 승인 요청글 작성 -> 관리자 승인 -> 전문가 승인 완료
 INSERT INTO qna
-VALUES 
+VALUES
 (
 NULL,
 '전문가 인증',
@@ -1029,8 +1027,8 @@ NULL,
 
 SELECT * FROM qna;
 
-INSERT INTO qna_photo 
-VALUES 
+INSERT INTO qna_photo
+VALUES
 (
 NULL,
 'https://cdn.imweb.me/thumbnail/20230202/5c6b68f3aa6fb.jpg',
@@ -1045,7 +1043,7 @@ WHERE qna.qna_code = 7;
 SELECT * FROM members WHERE members_code = 10;
 ```
 
-* 실행 결과
+- 실행 결과
 
 ![전문가승인](https://github.com/swcamp9thTeam4/scentseekers/assets/60764768/11447739-0a04-4de7-b593-adcbf7ccfedf)
 
@@ -1054,64 +1052,64 @@ SELECT * FROM members WHERE members_code = 10;
 <details style="margin-bottom:16px;">
 <summary>TEST-4: 검색어로 향수 검색</summary>
 
-* 브랜드명 '디올' 을 검색하여 향수 정보를 조회한다.
-    
+- 브랜드명 '디올' 을 검색하여 향수 정보를 조회한다.
+
 ```sql
-SELECT 
+SELECT
       p.product_brand
     , p.product_name
     , pi_tbl.ingredient_name
     , p.product_price
-FROM 
+FROM
     product p
 LEFT JOIN (
-    SELECT 
+    SELECT
         pii.product_code,
         i.ingredient_name
-    FROM 
+    FROM
         ingredient i
-    INNER JOIN 
+    INNER JOIN
         product_ingredient pii ON i.ingredient_code = pii.ingredient_code
 ) AS pi_tbl ON pi_tbl.product_code = p.product_code
-WHERE 
+WHERE
        p.product_brand LIKE '%디올%'
     OR p.product_name LIKE '%디올%'
     OR pi_tbl.ingredient_name LIKE '%디올%';
-   
+
 ```
 
-* 실행 결과
+- 실행 결과
 
 ![이름 검색 - 디올](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/90ae628c-2004-4224-b9ca-142dcd3fe788)
 
 <br/>
 
-* 계열 '머스크' 을 검색하여 해당 계열을 지닌 향수를 조회한다. 
+- 계열 '머스크' 을 검색하여 해당 계열을 지닌 향수를 조회한다.
 
 ```sql
-SELECT 
+SELECT
       p.product_brand
     , p.product_name
     , pi_tbl.ingredient_name
     , p.product_price
-FROM 
+FROM
     product p
 LEFT JOIN (
-    SELECT 
+    SELECT
         pii.product_code,
         i.ingredient_name
-    FROM 
+    FROM
         ingredient i
-    INNER JOIN 
+    INNER JOIN
         product_ingredient pii ON i.ingredient_code = pii.ingredient_code
 ) AS pi_tbl ON pi_tbl.product_code = p.product_code
-WHERE 
+WHERE
        p.product_brand LIKE '%머스크%'
     OR p.product_name LIKE '%머스크%'
     OR pi_tbl.ingredient_name LIKE '%머스크%';
 ```
 
-* 실행 결과
+- 실행 결과
 
 ![계열검색-머스크2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/4704e8a8-0082-4b52-bb91-ed70c85947d4)
 
@@ -1120,14 +1118,14 @@ WHERE
 <details style="margin-bottom:16px;">
 <summary>TEST-5: 해시태그로 리뷰/게시글 통합 검색</summary>
 
-* '시향' 검색을 통해 시향 해시태그를 포함하는 리뷰와 게시글을 통합 조회한다.
-    
+- '시향' 검색을 통해 시향 해시태그를 포함하는 리뷰와 게시글을 통합 조회한다.
+
 ```sql
 -- 해시태그 '시향'으로 리뷰와 게시글을 통합 검색하는 쿼리
 (
     -- 게시글 쿼리
-    SELECT 
-        'Post' AS type, 
+    SELECT
+        'Post' AS type,
         post_tbl.hashtag_name,
         m.members_nickname,
         mgg.members_grade_name,
@@ -1135,74 +1133,74 @@ WHERE
         m.members_gender,
         m.members_ageRange,
         p.post_title AS content_title,
-        NULL AS review_content, 
-        NULL AS review_duration, 
-        NULL AS review_season,   
+        NULL AS review_content,
+        NULL AS review_duration,
+        NULL AS review_season,
         NULL AS review_similarity,
         NULL AS review_likeCount,
         p.post_category,
         p.post_date,
         p.post_like
-    FROM 
+    FROM
         post p
-    INNER JOIN 
+    INNER JOIN
         members m ON m.members_code = p.members_code
-    INNER JOIN 
+    INNER JOIN
         members_grade mgg ON m.members_grade_code = mgg.members_grade_code
-    INNER JOIN 
-        (SELECT 
+    INNER JOIN
+        (SELECT
             ph.post_code,
             h.hashtag_name
-         FROM 
+         FROM
             hashtag h
-         INNER JOIN 
+         INNER JOIN
             post_hashtag ph ON ph.hashtag_code = h.hashtag_code
-         WHERE 
+         WHERE
             h.hashtag_name = '시향'
         ) AS post_tbl ON post_tbl.post_code = p.post_code
 )
 UNION ALL
 (
     -- 리뷰 쿼리
-    SELECT 
-        'Review' AS type, 
+    SELECT
+        'Review' AS type,
         review_tbl.hashtag_name,
         m.members_nickname,
         mgg.members_grade_name,
         m.members_expCert,
         m.members_gender,
         m.members_ageRange,
-        NULL AS content_title, 
+        NULL AS content_title,
         r.review_content,
         r.review_duration,
         r.review_season,
         r.review_similarity,
         r.review_likeCount,
-        NULL AS post_category, 
-        NULL AS post_date,     
-        NULL AS post_like     
-    FROM 
+        NULL AS post_category,
+        NULL AS post_date,
+        NULL AS post_like
+    FROM
         review r
-    INNER JOIN 
+    INNER JOIN
         members m ON m.members_code = r.members_code
-    INNER JOIN 
+    INNER JOIN
         members_grade mgg ON m.members_grade_code = mgg.members_grade_code
-    INNER JOIN 
-        (SELECT 
+    INNER JOIN
+        (SELECT
             rh.review_code,
             h.hashtag_name
-         FROM 
+         FROM
             hashtag h
-         INNER JOIN 
+         INNER JOIN
             review_hashtag rh ON rh.hashtag_code = h.hashtag_code
-         WHERE 
+         WHERE
             h.hashtag_name = '시향'
         ) AS review_tbl ON review_tbl.review_code = r.review_code
 );
 
 ```
 
-* 실행 결과
+- 실행 결과
 
 ![해시태그로 리뷰_게시글 통합검색](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/1bd9d420-5059-4c4a-8412-1c9338a8473e)
 
@@ -1213,45 +1211,44 @@ UNION ALL
 
 <br/>
 
-* 향료에 '일랑일랑', '라벤더', '샌달우드', '베르가못' 중 하나라도 포함되는 향수 찾기 (유저가 체크박스 등으로 여러 향료를 선택했다고 가정)
-    
+- 향료에 '일랑일랑', '라벤더', '샌달우드', '베르가못' 중 하나라도 포함되는 향수 찾기 (유저가 체크박스 등으로 여러 향료를 선택했다고 가정)
+
 ```sql
 SELECT
        DISTINCT
        c.product_code
-     , c.product_name 
-     , c.product_price 
-     , c.product_texture 
+     , c.product_name
+     , c.product_price
+     , c.product_texture
      , c.product_season
-     , c.product_gender 
-     , c.product_duration 
-     , c.product_brand 
+     , c.product_gender
+     , c.product_duration
+     , c.product_brand
      , c.product_weight
   FROM ingredient a
-  JOIN product_ingredient b ON a.ingredient_code = b.ingredient_code 
+  JOIN product_ingredient b ON a.ingredient_code = b.ingredient_code
   JOIN product c ON b.product_code = c.product_code
  WHERE a.ingredient_name IN ('일랑일랑','라벤더','샌달우드','베르가못');
 ```
 
 <br/>
 
-* 실행 결과
+- 실행 결과
 
 <img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/a96f3b34-0443-422f-b4e6-c54276e98105" alt="TEST_6_실행결과" />
 
 </details>
-
 
 <details style="margin-bottom:16px;">
 <summary>TEST-7: 좋아요 TOP5 브랜드 조회</summary>
 
 <br/>
 
-* 좋아요가 많은 순으로 향수 브랜드 5개를 조회한다.
-    
+- 좋아요가 많은 순으로 향수 브랜드 5개를 조회한다.
+
 ```sql
-SELECT 
-       a.product_brand 
+SELECT
+       a.product_brand
      , sum(a.product_likeCnt)
   FROM product a
  GROUP BY a.product_brand
@@ -1261,32 +1258,31 @@ SELECT
 
 <br/>
 
-* 실행 결과
+- 실행 결과
 
 <img width="375" alt="TEST-7-실행결과" src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/d237c39e-4442-46ae-80ba-6c131ef89bc7">
 
 </details>
 
-
 <details style="margin-bottom:16px;">
 <summary>TEST-8: 향수 상세정보 확인</summary>
 
-* 제품 코드가 '11'인 향수의 상세정보를 확인한다.
-    
+- 제품 코드가 '11'인 향수의 상세정보를 확인한다.
+
 ```sql
 -- 11번 향수 상세정보 조회 (향수 + 사진 url)
-SELECT 
+SELECT
     	  a.*
     	, b.product_photo_url
-  FROM 
+  FROM
    	product a
   JOIN product_photo b ON a.product_code = b.product_code
  WHERE a.product_code = 11;
-  
+
 -- 11번 향수의 향료 조회
 SELECT
 		  a.product_code
-		, a.product_ingredient_ingredientNote 
+		, a.product_ingredient_ingredientNote
 		, b.ingredient_name
    FROM product_ingredient a
    JOIN ingredient b ON a.product_ingredient_code = b.ingredient_code
@@ -1301,19 +1297,18 @@ SELECT
   WHERE product_code = 11;
 ```
 
-* 실행 결과
+- 실행 결과
 
 ![test8](https://github.com/swcamp9thTeam4/scentseekers/assets/57509627/389efba0-ee45-48fb-8e97-a4af7b242634)
 
 </details>
 
-
 <details style="margin-bottom:16px;">
 <summary>TEST-9: 향수 '좋아요' 하기</summary>
 
-* 향수에 좋아요를 누르면 향수의 좋아요 수를 1 증가시킨다
-* 좋아요를 취소한 경우 향수의 좋아요 수를 1 감소시킨다
-    
+- 향수에 좋아요를 누르면 향수의 좋아요 수를 1 증가시킨다
+- 좋아요를 취소한 경우 향수의 좋아요 수를 1 감소시킨다
+
 ```sql
 -- 1. 좋아요 등록
 DELIMITER //
@@ -1342,19 +1337,17 @@ END //
 DELIMITER ;
 ```
 
-* 실행 결과
+- 실행 결과
 
 ![test9](https://github.com/swcamp9thTeam4/scentseekers/assets/57509627/8b31c792-0922-4652-b567-04913b5fd556)
 
 </details>
 
-
-
 <details style="margin-bottom:16px;">
 <summary>TEST-10: 리뷰 작성</summary>
 
-* 리뷰를 작성하면 등급 및 응모권 포인트가 각각 10점씩 증가 된다.
-    
+- 리뷰를 작성하면 등급 및 응모권 포인트가 각각 10점씩 증가 된다.
+
 ```sql
 SELECT * FROM members;
 
@@ -1410,7 +1403,7 @@ INSERT INTO review (review_content, review_duration, review_season, review_simil
 VALUES ('향이 너무 좋아요', '비슷해요', '여름', '보통', 0, 2, 5);
 
 -- 리뷰 작성 후 포인트 및 등급 조회
-SELECT 
+SELECT
     m.members_code,
     m.members_email,
     m.members_name,
@@ -1427,7 +1420,7 @@ FROM members m
 JOIN members_grade g ON m.members_grade_code = g.members_grade_code;
 ```
 
-* 실행 결과
+- 실행 결과
 
 ![10(2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/517049fd-ef6c-43da-b1e7-89b21692ee27)
 
@@ -1436,11 +1429,11 @@ JOIN members_grade g ON m.members_grade_code = g.members_grade_code;
 <details style="margin-bottom:16px;">
 <summary>TEST-11: 리뷰에서 가장 높은 키워드 표시</summary>
 
-* 전체 향수 리뷰에서 가장 높은 키워드를 표시한다. (지속력, 향이 비슷한지, 어울리는 계절)
-    
+- 전체 향수 리뷰에서 가장 높은 키워드를 표시한다. (지속력, 향이 비슷한지, 어울리는 계절)
+
 ```sql
 -- 11번 (1) 전체 향수 리뷰에서높은 키워드 (지속력, 향, 어울리는 계절) + 향수 이름까지 가져오기
-SELECT 
+SELECT
     (SELECT review_duration
      FROM review
      GROUP BY review_duration
@@ -1462,7 +1455,7 @@ JOIN product p ON r.product_code = p.product_code
 LIMIT 1;
 ```
 
-* 실행 결과
+- 실행 결과
 
 ![11번(1)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/463743c7-7243-46e3-9a5d-44ff534c6393)
 
@@ -1494,19 +1487,17 @@ JOIN product p ON r.product_code = p.product_code
 GROUP BY r.product_code, p.product_name;
 ```
 
-* 실행 결과
+- 실행 결과
 
 ![11번-2(2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/43e21894-cc02-4dba-ba8a-1bc4d5dad48c)
 
 </details>
 
-
-
 <details style="margin-bottom:16px;">
 <summary>TEST-12: 게시글 등록</summary>
 
-* 게시글을 등록하면, 회원의 등급/응모권 포인트 내역에 기록되고 회원의 누적 등급 포인트가 10점 추가되며 회원의 현재 등급포인트에 따라 등급을 조정한다.
-    
+- 게시글을 등록하면, 회원의 등급/응모권 포인트 내역에 기록되고 회원의 누적 등급 포인트가 10점 추가되며 회원의 현재 등급포인트에 따라 등급을 조정한다.
+
 ```sql
 /* 게시글 작성에 따른 포인트 적립 trigger */
 
@@ -1517,30 +1508,30 @@ GROUP BY r.product_code, p.product_name;
 DELIMITER //
 
 CREATE OR REPLACE TRIGGER after_insert_post
-   AFTER INSERT 
+   AFTER INSERT
    ON post
-   FOR EACH ROW 
+   FOR EACH ROW
 BEGIN
 
   DECLARE g_point INT;  -- 현재등급포인트(= 누적등급포인트)
   DECLARE c_point INT;  -- 현재응모권포인트(= 누적응모권포인트)
-  
+
       SET g_point = (
    SELECT DISTINCT a.members_gradePoint FROM members a
      JOIN grade_point b ON a.members_code = b.members_code
 	   JOIN post ON b.members_code = NEW.members_code);
-	  
+
 	    SET c_point = (
    SELECT DISTINCT e.members_couponPoint FROM members e
      JOIN coupon_point f ON e.members_code = f.members_code
 	   JOIN post ON f.members_code = NEW.members_code);
-	
+
    INSERT INTO grade_point
 	 VALUES (null, 10, g_point + 10, NOW(), 2, NEW.members_code);
-	
+
    INSERT INTO coupon_point
 	 VALUES (null, 10, c_point + 10, NOW(), 2, NEW.members_code);
-	
+
 END //
 
 DELIMITER ;
@@ -1555,15 +1546,15 @@ DELIMITER ;
 DELIMITER //
 
 CREATE OR REPLACE TRIGGER after_insert_grade_point
-   AFTER INSERT 
+   AFTER INSERT
    ON grade_point
-   FOR EACH ROW 
+   FOR EACH ROW
 BEGIN
 
    UPDATE members c
       SET c.members_gradePoint = NEW.grade_point_accum
     WHERE c.members_code = NEW.members_code;
-      
+
    if NEW.grade_point_accum >= 500 then
       UPDATE members d
          SET d.members_grade_code = 3
@@ -1577,7 +1568,7 @@ BEGIN
          SET d.members_grade_code = 1
        WHERE NEW.members_code = d.members_code;
    END if;
-   
+
 END //
 
 DELIMITER ;
@@ -1598,18 +1589,15 @@ SELECT
   FROM members a;
 ```
 
-* 실행 결과
-
+- 실행 결과
 
 </details>
-
-
 
 <details style="margin-bottom:16px;">
 <summary>TEST-13: 댓글 등록</summary>
 
-* 댓글이 등록되면, 회원의 등급/응모권 포인트 내역에 기록되고 회원의 누적 응모권 포인트를 5점 증가시킨다.
-    
+- 댓글이 등록되면, 회원의 등급/응모권 포인트 내역에 기록되고 회원의 누적 응모권 포인트를 5점 증가시킨다.
+
 ```sql
 /* 댓글 작성에 따른 포인트 적립 trigger */
 
@@ -1620,30 +1608,30 @@ SELECT
 DELIMITER //
 
 CREATE OR REPLACE TRIGGER after_insert_comments
-   AFTER INSERT 
+   AFTER INSERT
    ON comments
-   FOR EACH ROW 
+   FOR EACH ROW
 BEGIN
 
   DECLARE g_point INT;  -- 현재등급포인트(= 누적등급포인트)
   DECLARE c_point INT;  -- 현재응모권포인트(= 누적응모권포인트)
-  
+
       SET g_point = (
    SELECT DISTINCT a.members_gradePoint FROM members a
      JOIN grade_point b ON a.members_code = b.members_code
 	   JOIN comments ON b.members_code = NEW.members_code);
-	  
+
 	    SET c_point = (
    SELECT DISTINCT c.members_couponPoint FROM members c
      JOIN coupon_point d ON c.members_code = d.members_code
 	   JOIN comments ON d.members_code = NEW.members_code);
-	
+
    INSERT INTO grade_point
 	 VALUES (NULL, 5, g_point + 5, NOW(), 4, NEW.members_code);
-	
+
    INSERT INTO coupon_point
 	 VALUES (NULL, 5, c_point + 5, NOW(), 4, NEW.members_code);
-	
+
 END //
 
 DELIMITER ;
@@ -1657,15 +1645,15 @@ DELIMITER ;
 DELIMITER //
 
 CREATE OR REPLACE TRIGGER after_insert_coupon_point
-   AFTER INSERT 
+   AFTER INSERT
    ON coupon_point
-   FOR EACH ROW 
+   FOR EACH ROW
 BEGIN
 
    UPDATE members e
       SET e.members_couponPoint = NEW.coupon_point_accum
     WHERE e.members_code = NEW.members_code;
-    
+
 END //
 
 DELIMITER ;
@@ -1684,18 +1672,15 @@ SELECT
   FROM members a;
 ```
 
-* 실행 결과
-
+- 실행 결과
 
 </details>
-
-
 
 <details style="margin-bottom:16px;">
 <summary>TEST-14: 게시글 신고</summary>
 
-* 게시글을 신고하면 해당 게시글 신고 count 증가한다.
-    
+- 게시글을 신고하면 해당 게시글 신고 count 증가한다.
+
 ```sql
 -- 14(1) 게시글 신고하기
 SELECT * FROM post;
@@ -1714,6 +1699,7 @@ END //
 
 DELIMITER ;
 ```
+
 ```sql
 -- 14(2) count 확인하기
 INSERT INTO report (report_category, report_reason, report_date, report_postCode)
@@ -1722,7 +1708,7 @@ VALUES ('POST', '스팸성 게시글', NOW(), 1);
 SELECT * FROM post WHERE report_count >= 1;
 ```
 
-* 실행 결과
+- 실행 결과
 
 ![14(2)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/9d81335d-6ebe-4d75-b7b2-33ccbc9db11c)
 
@@ -1731,8 +1717,8 @@ SELECT * FROM post WHERE report_count >= 1;
 <details style="margin-bottom:16px;">
 <summary>TEST-15: 신고 내역 처리</summary>
 
-* 글의 신고 횟수가 3번 이상인 경우 게시글을 삭제하고 해당 글을 작성한 회원의 포인트를 50점 차감한다.
-    
+- 글의 신고 횟수가 3번 이상인 경우 게시글을 삭제하고 해당 글을 작성한 회원의 포인트를 50점 차감한다.
+
 ```sql
 -- 15 신고 내역 처리
 SELECT * FROM post;
@@ -1745,15 +1731,15 @@ BEGIN
     DECLARE done INT DEFAULT 0;
     DECLARE postId INT;
     DECLARE memberId INT;
-    DECLARE reportCursor CURSOR FOR 
-        SELECT post_code, members_code 
-        FROM post 
+    DECLARE reportCursor CURSOR FOR
+        SELECT post_code, members_code
+        FROM post
         WHERE report_count >= 3;
-    
+
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
 
     OPEN reportCursor;
-    
+
     read_loop: LOOP
         FETCH reportCursor INTO postId, memberId;
         IF done THEN
@@ -1762,7 +1748,7 @@ BEGIN
 
         -- 댓글 삭제
         DELETE FROM comments WHERE post_code = postId;
-        
+
         -- 게시글 사진 삭제
         DELETE FROM post_photo WHERE post_code = postId;
 
@@ -1799,6 +1785,7 @@ ON SCHEDULE EVERY 1 SECOND
 DO
   CALL handle_report();
 ```
+
 ```sql
 -- 신고 넣기
 INSERT INTO report (report_category, report_reason, report_date, report_postCode)
@@ -1816,13 +1803,11 @@ SELECT * FROM post;
 SELECT * FROM members;
 ```
 
-* 실행 결과
+- 실행 결과
 
 ![15번(1)](https://github.com/swcamp9thTeam4/scentseekers/assets/101093309/71ba57cb-f608-47a8-b023-99f4162d4ebf)
 
 </details>
-
-
 
 <details style="margin-bottom:16px;">
 <summary>TEST-16: 이벤트 당첨자 추출</summary>
@@ -1835,39 +1820,37 @@ SELECT * FROM members;
 /* 응모 회원 랜덤 추출 **/
 
 -- 1. 향고수 추첨
-SELECT 
-       DISTINCT a.members_code
-  FROM coupon_point a
-  JOIN members b ON a.members_code = b.members_code
- WHERE b.members_grade_code = 3
-   AND b.members_status = '정상'
-   AND b.members_couponPointCnt != 0
- ORDER BY RAND()
- LIMIT 5;
+SELECT
+DISTINCT a.members_code
+FROM coupon_point a
+JOIN members b ON a.members_code = b.members_code
+WHERE b.members_grade_code = 3
+AND b.members_status = '정상'
+AND b.members_couponPointCnt != 0
+ORDER BY RAND()
+LIMIT 5;
 
- 
 -- 2. 향소년 추첨
-SELECT 
-       DISTINCT a.members_code
-  FROM coupon_point a
-  JOIN members b ON a.members_code = b.members_code
- WHERE b.members_grade_code = 2
-   AND b.members_status = '정상'
-   AND b.members_couponPointCnt != 0
- ORDER BY RAND()
- LIMIT 3;
- 
+SELECT
+DISTINCT a.members_code
+FROM coupon_point a
+JOIN members b ON a.members_code = b.members_code
+WHERE b.members_grade_code = 2
+AND b.members_status = '정상'
+AND b.members_couponPointCnt != 0
+ORDER BY RAND()
+LIMIT 3;
 
 -- 3. 향린이 추첨
-SELECT 
-       DISTINCT a.members_code
-  FROM coupon_point a
-  JOIN members b ON a.members_code = b.members_code
- WHERE b.members_grade_code = 1
-   AND b.members_status = '정상'
-   AND b.members_couponPointCnt != 0
- ORDER BY RAND()
- LIMIT 1;
+SELECT
+DISTINCT a.members_code
+FROM coupon_point a
+JOIN members b ON a.members_code = b.members_code
+WHERE b.members_grade_code = 1
+AND b.members_status = '정상'
+AND b.members_couponPointCnt != 0
+ORDER BY RAND()
+LIMIT 1;
 
 ```
 
@@ -1881,55 +1864,69 @@ SELECT
 ## 3. 동료 평가
 
 ```
+
 장호정
 ㄴ 갑:
 ㄴ 을:
 ㄴ 병:
 ㄴ 정:
 ㄴ 무:
+
 ```
 
 ```
+
 양현진
 ㄴ 갑:
 ㄴ 을:
 ㄴ 병:
 ㄴ 정:
 ㄴ 무:
+
 ```
 
 ```
+
 박경희
 ㄴ 갑:
 ㄴ 을:
 ㄴ 병:
 ㄴ 정:
 ㄴ 무:
+
 ```
 
 ```
+
 노다민
 ㄴ 갑:
 ㄴ 을:
 ㄴ 병:
 ㄴ 정:
 ㄴ 무:
+
 ```
 
 ```
+
 김시우
 ㄴ 갑:
 ㄴ 을:
 ㄴ 병:
 ㄴ 정:
 ㄴ 무:
+
 ```
 
 ```
+
 윤채연
 ㄴ 갑:
 ㄴ 을:
 ㄴ 병:
 ㄴ 정:
 ㄴ 무:
+
+```
+
 ```
