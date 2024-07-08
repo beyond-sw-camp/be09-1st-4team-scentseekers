@@ -1,6 +1,7 @@
 # BEYOND SWCAMP 9기 4조 - ScentSeekers
 
-<img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/131a0e63-a867-46b5-9db3-fb325e24f916" alt="scentseekers_icon" width="250" />
+<img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/131a0e63-a867-46b5-9db3-fb325e24f916" alt="scentseekers_icon" width="250" />	
+
 
 ### 팀원
 
@@ -37,7 +38,7 @@ SentSeekers 사이트는 향수 입문자를 위한 향수 추천 사이트입�
 
 ### 요구사항 명세서
 
-- 담당자랑 중요도 까지 캡쳐한 이미지
+<img src="https://github.com/swcamp9thTeam4/scentseekers/blob/main/%E1%84%8B%E1%85%AD%E1%84%80%E1%85%AE%E1%84%89%E1%85%A1%E1%84%92%E1%85%A1%E1%86%BC_%E1%84%86%E1%85%A7%E1%86%BC%E1%84%89%E1%85%A6%E1%84%89%E1%85%A5.png?raw=true" alt="scentseekers_요구사항_명세서" />	
 
 ### 데이터베이스 모델링
 
