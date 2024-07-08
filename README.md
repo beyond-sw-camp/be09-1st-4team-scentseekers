@@ -1,4 +1,4 @@
-![논리모델링 최종 2 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/0f8d37af-7671-470f-95f5-01c369a35919)# BEYOND SWCAMP 9기 4조 - ScentSeekers
+
 
 
 ![Slide 16_9 - 2](https://github.com/swcamp9thTeam4/scentseekers/assets/140694377/830ef1d2-9969-4f06-afb6-0315c7eb32aa)
