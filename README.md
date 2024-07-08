@@ -2,7 +2,7 @@
 
 <img src="https://github.com/swcamp9thTeam4/scentseekers/assets/33366450/131a0e63-a867-46b5-9db3-fb325e24f916" alt="scentseekers_icon" width="250" />	
 
-[Slide 16_9 - 2.pdf](https://github.com/user-attachments/files/16122077/Slide.16_9.-.2.pdf)
+<img src="[Slide 16_9 - 2.pdf](https://github.com/user-attachments/files/16122077/Slide.16_9.-.2.pdf)"/>
 
 
 
