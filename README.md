@@ -1444,6 +1444,79 @@ GROUP BY r.product_code, p.product_name;
 : 게시글을 등록하면, 회원의 등급/응모권 포인트 내역에 기록되고 회원의 누적 등급 포인트가 10점 추가되며 회원의 현재 등급포인트에 따라 등급을 조정한다.
     
 ```sql
+/* 게시글 작성에 따른 포인트 적립 trigger */
+
+-- 1. 회원이 게시글 등록 (insert 이벤트)
+-- 2. 회원의 등급포인트내역 추가 (insert)
+-- 3. 회원의 응모권포인트내역 추가 (insert)
+
+DELIMITER //
+
+CREATE OR REPLACE TRIGGER after_insert_post
+   AFTER INSERT 
+   ON post
+   FOR EACH ROW 
+BEGIN
+
+  DECLARE g_point INT;  -- 현재등급포인트(= 누적등급포인트)
+  DECLARE c_point INT;  -- 현재응모권포인트(= 누적응모권포인트)
+  
+      SET g_point = (
+   SELECT DISTINCT a.members_gradePoint FROM members a
+     JOIN grade_point b ON a.members_code = b.members_code
+	   JOIN post ON b.members_code = NEW.members_code);
+	  
+	    SET c_point = (
+   SELECT DISTINCT e.members_couponPoint FROM members e
+     JOIN coupon_point f ON e.members_code = f.members_code
+	   JOIN post ON f.members_code = NEW.members_code);
+	
+   INSERT INTO grade_point
+	 VALUES (null, 10, g_point + 10, NOW(), 2, NEW.members_code);
+	
+   INSERT INTO coupon_point
+	 VALUES (null, 10, c_point + 10, NOW(), 2, NEW.members_code);
+	
+END //
+
+
+DELIMITER ;
+
+/* 등급포인트내역 누적에 따른 등급 책정 trigger */
+
+-- 1. 회원의 등급포인트내역 추가 (insert 이벤트)
+-- 2. 누적포인트를 현재등급포인트에 반영 (update)
+-- 3. 회원의 현재등급포인트에 따른 등급 책정 (if, update)
+
+DELIMITER //
+
+CREATE OR REPLACE TRIGGER after_insert_grade_point
+   AFTER INSERT 
+   ON grade_point
+   FOR EACH ROW 
+BEGIN
+
+   UPDATE members c
+      SET c.members_gradePoint = NEW.grade_point_accum
+    WHERE c.members_code = NEW.members_code;
+      
+   if NEW.grade_point_accum >= 500 then
+      UPDATE members d
+         SET d.members_grade_code = 3
+       WHERE NEW.members_code = d.members_code;
+   ELSEIF NEW.grade_point_accum >= 70 then
+      UPDATE members d
+         SET d.members_grade_code = 2
+       WHERE NEW.members_code = d.members_code;
+   ELSEIF NEW.grade_point_accum < 70 then
+      UPDATE members d
+         SET d.members_grade_code = 1
+       WHERE NEW.members_code = d.members_code;
+   END if;
+   
+END //
+
+DELIMITER ;
 ```
 </details>
 
@@ -1452,6 +1525,64 @@ GROUP BY r.product_code, p.product_name;
 : 댓글이 등록되면, 회원의 등급/응모권 포인트 내역에 기록되고 회원의 누적 응모권 포인트를 5점 증가시킨다.
     
 ```sql
+/* 댓글 작성에 따른 포인트 적립 trigger */
+
+-- 1. 회원이 댓글 등록 (insert 이벤트)
+-- 2. 회원의 등급포인트내역 추가 (insert)
+-- 3. 회원의 응모권포인트내역 추가 (insert)
+
+DELIMITER //
+
+CREATE OR REPLACE TRIGGER after_insert_comments
+   AFTER INSERT 
+   ON comments
+   FOR EACH ROW 
+BEGIN
+
+  DECLARE g_point INT;  -- 현재등급포인트(= 누적등급포인트)
+  DECLARE c_point INT;  -- 현재응모권포인트(= 누적응모권포인트)
+  
+      SET g_point = (
+   SELECT DISTINCT a.members_gradePoint FROM members a
+     JOIN grade_point b ON a.members_code = b.members_code
+	   JOIN comments ON b.members_code = NEW.members_code);
+	  
+	    SET c_point = (
+   SELECT DISTINCT c.members_couponPoint FROM members c
+     JOIN coupon_point d ON c.members_code = d.members_code
+	   JOIN comments ON d.members_code = NEW.members_code);
+	
+   INSERT INTO grade_point
+	 VALUES (NULL, 5, g_point + 5, NOW(), 4, NEW.members_code);
+	
+   INSERT INTO coupon_point
+	 VALUES (NULL, 5, c_point + 5, NOW(), 4, NEW.members_code);
+	
+END //
+
+DELIMITER ;
+
+
+/* 누적포인트를 현재응모권포인트에 반영하는 trigger */
+
+-- 1. 회원의 응모권포인트내역이 추가 (insert 이벤트)
+-- 2. 누적포인트를 현재응모권포인트에 반영 (update)
+
+DELIMITER //
+
+CREATE OR REPLACE TRIGGER after_insert_coupon_point
+   AFTER INSERT 
+   ON coupon_point
+   FOR EACH ROW 
+BEGIN
+
+   UPDATE members e
+      SET e.members_couponPoint = NEW.coupon_point_accum
+    WHERE e.members_code = NEW.members_code;
+    
+END //
+
+DELIMITER ;
 ```
 </details>
 
@@ -1585,6 +1716,43 @@ SELECT * FROM members;
 : '향린이' 등급의 이벤트 응모 회원 중 1명을 랜덤으로 선택한다.
     
 ```sql
+/* 응모 회원 랜덤 추출 **/
+
+-- 1. 향고수 추첨
+SELECT 
+       DISTINCT a.members_code
+  FROM coupon_point a
+  JOIN members b ON a.members_code = b.members_code
+ WHERE b.members_grade_code = 3
+   AND b.members_status = '정상'
+   AND b.members_couponPointCnt != 0
+ ORDER BY RAND()
+ LIMIT 5;
+
+ 
+-- 2. 향소년 추첨
+SELECT 
+       DISTINCT a.members_code
+  FROM coupon_point a
+  JOIN members b ON a.members_code = b.members_code
+ WHERE b.members_grade_code = 2
+   AND b.members_status = '정상'
+   AND b.members_couponPointCnt != 0
+ ORDER BY RAND()
+ LIMIT 3;
+ 
+
+-- 3. 향린이 추첨
+SELECT 
+       DISTINCT a.members_code
+  FROM coupon_point a
+  JOIN members b ON a.members_code = b.members_code
+ WHERE b.members_grade_code = 1
+   AND b.members_status = '정상'
+   AND b.members_couponPointCnt != 0
+ ORDER BY RAND()
+ LIMIT 1;
+
 ```
 </details>
 
