@@ -1280,29 +1280,29 @@ SELECT
 ```sql
 -- 11번 향수 상세정보 조회 (향수 + 사진 url)
 SELECT
-    	  a.*
-    	, b.product_photo_url
+      a.*
+    , b.product_photo_url
   FROM
-   	product a
+    product a
   JOIN product_photo b ON a.product_code = b.product_code
  WHERE a.product_code = 11;
 
 -- 11번 향수의 향료 조회
 SELECT
-		  a.product_code
-		, a.product_ingredient_ingredientNote
-		, b.ingredient_name
-   FROM product_ingredient a
-   JOIN ingredient b ON a.product_ingredient_code = b.ingredient_code
-  WHERE product_code = 11;
+      a.product_code
+    , a.product_ingredient_ingredientNote
+    , b.ingredient_name
+ FROM product_ingredient a
+ JOIN ingredient b ON a.product_ingredient_code = b.ingredient_code
+WHERE product_code = 11;
 
 -- 11번 향수의 계열 조회
 SELECT
-		  a.product_code
-		, b.category_type
-	FROM product_category a
-	JOIN category b ON b.category_code = a.category_code
-  WHERE product_code = 11;
+      a.product_code
+    , b.category_type
+  FROM product_category a
+  JOIN category b ON b.category_code = a.category_code
+ WHERE product_code = 11;
 ```
 
 - 실행 결과
@@ -1325,9 +1325,9 @@ AFTER INSERT
 ON product_like
 FOR EACH ROW
 BEGIN
-  UPDATE product
-  SET product_likeCnt  = product_likeCnt + 1
-  WHERE product_code  = NEW.product_code ;
+    UPDATE product
+    SET product_likeCnt  = product_likeCnt + 1
+    WHERE product_code  = NEW.product_code ;
 END //
 DELIMITER ;
 
@@ -1338,9 +1338,9 @@ AFTER DELETE
 ON product_like
 FOR EACH ROW
 BEGIN
-  UPDATE product
-  SET product_likeCnt = product_likeCnt - 1
-  WHERE product_code = OLD.product_code;
+    UPDATE product
+    SET product_likeCnt = product_likeCnt - 1
+    WHERE product_code = OLD.product_code;
 END //
 DELIMITER ;
 ```
@@ -1930,7 +1930,7 @@ LIMIT 1;
 ```
 
 김시우
-ㄴ 팀원1:  물리 모델링과 쿼리 작성, 더미데이터 작성에서 많은 기여를 해 주셨습니다. 또한 쿼리를 작성하며 나타난 문제점들을 적극적으로 공유하고 해결하는 모습을 보여주셨습니다.
+ㄴ 팀원1: 물리 모델링과 쿼리 작성, 더미데이터 작성에서 많은 기여를 해 주셨습니다. 또한 쿼리를 작성하며 나타난 문제점들을 적극적으로 공유하고 해결하는 모습을 보여주셨습니다.
 ㄴ 팀원2: 트리거 쿼리를 잘 작성해주셨고 조언을 많이 해주셨습니다. 특히 제가 부족한 부분이 많았는데 먼저 잘 도와주셔서 협력하는 과정에서 도움을 많이 받았습니다!
 ㄴ 팀원3: 마지막까지 프로젝트의 구조적 문제를 발견해주셔서 프로젝트의 완결성을 높일 수 있었습니다. (게시글 신고처리 테이블)
 ㄴ 팀원4: 다양한 관점에서 의견을 제시하고 데이터 구조를 설계하며 구현하는 데 중요한 역할을 했습니다.
